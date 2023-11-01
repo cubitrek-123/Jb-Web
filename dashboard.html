@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+
+<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed" dir="ltr" data-theme="theme-default"
+  data-assets-path="../../assets/" data-template="vertical-menu-template">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+  <title>Dashboard | Night Lyfe</title>
+
+  <meta name="description" content="" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../../assets/img/favicon/favicon.png" />
+  <style>
+/* Styles for page */ 
+@lightgrey: #dddddd;
+@textcolor: #4B4B4B;
+
+.container {
+  width: 70%;
+  margin: 150px auto;
+}
+
+body {
+  color: @textcolor;
+  font-family: sans-serif;
+
+  a {
+    cursor: pointer;
+    color: @textcolor;
+    text-decoration: none;
+  }
+
+  section {
+    margin-bottom: 90px;
+
+    h1 {
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: normal;
+      letter-spacing: 10px;
+      font-size: 25px;
+      line-height: 1.5;
+    }
+
+    p, a {
+      text-align: center;
+      letter-spacing: 3px;
+    }
+  }
+}
+
+span {
+  letter-spacing: 0px;
+}
+
+p {
+  font-weight: 200;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* Styles for Accordion */
+
+.toggle {
+  &:last-child {
+    border-bottom: 1px solid lightgrey;
+  }
+
+  .toggle-title {
+    position: relative;
+    display: block;
+    border-top: 1px solid lightgrey;
+    margin-bottom: 6px;
+
+    h3 {
+      font-size: 20px;
+      margin: 0;
+      line-height: 1;
+      cursor: pointer;
+      font-weight: 200;
+    }
+
+    &.active h3 {}
+
+    .toggle-inner {
+      padding: 7px 25px 10px 25px;
+      display: none;
+      margin: -7px 0 6px;
+
+      div {
+        max-width: 100%;
+      }
+
+      .toggle-title {
+        .title-name {
+          display: block;
+          padding: 25px 25px 14px;
+        }
+
+        a i {
+          font-size: 22px;
+          margin-right: 5px;
+        }
+
+        i {
+          position: absolute;
+          background: url('http://arielbeninca.com/Storage/plus_minus.png') 0px -24px no-repeat;
+          width: 24px;
+          height: 24px;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+          margin: 20px;
+          right: 0;
+        }
+
+        &.active i {
+          background: url('http://arielbeninca.com/Storage/plus_minus.png') 0px 0px no-repeat;
+        }
+      }
+    }
+  }
+}
+
+.ourClients{
+  padding-bottom: 0.8rem;
+  padding-top: 1rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  border-radius: 10px;
+border: 1px solid #ABABAB;
+}
+.ourClients p{
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+}
+.headingAndPic{
+ gap: 1.5rem !important;
+}
+.image{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ height: 3.5rem; 
+ width: 3.5rem; 
+ border-radius: 50%; 
+ border:1px solid gray; 
+ /* padding: 1rem; */
+}
+
+    .nightlifeLogo {
+      height: 9rem;
+      width: 11rem;
+    }
+    .inputAndSpan{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  .templateLibrary{
+    display: flex;
+    gap: 1.5rem;
+  }
+  .secondTemplate .firstChild{
+    height: 100%;
+  }
+  .firstChild, .secondChild{
+    border-radius: 10px;
+border: 1px solid #ABABAB;
+  }
+  .templateLibrary h2{
+    color: #6D6D6D !important;
+
+font-family: Poppins;
+/* font-size: 24px; */
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+text-transform: uppercase;
+    /* color: black !important; */
+  }
+  .templateContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem !important;
+
+  }
+  .secondTemplate .firstChild{
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem ;
+  }
+  .templateContent2{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+  }
+  
+  .firstTemplate .firstChild, .secondChild{
+    padding: 1.3rem 1.3rem 1.3rem 1.3rem;
+
+  }
+  .firstTemplate{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: 10px;
+  }
+  .secondTemplate span{
+    color: #1563AB;
+    margin-bottom: 0.5rem;
+
+  }
+  .firstTemplate span{
+    color: #1563AB;
+    margin-bottom: 0.3rem;
+
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+  }
+  .firstChild, .secondChild{
+border: 1px solid #ABABAB;
+
+  }
+  .myBox{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    border-radius: 10px;
+background: #84BFE1;
+height: 8rem;
+padding-right: 3rem;
+padding-left: 3rem;
+padding-top: 1rem;
+padding-bottom: 1rem;
+box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.25);
+
+  }
+  .parentOfProject{
+    display: flex;
+    gap: 1rem;
+  }
+  /* .projectBox img{
+    width: 1rem;
+  } */
+  .projectBox{
+    display: flex;
+    justify-content: center;
+padding:0.5rem 1.4rem ;
+    /* align-items: center; */
+    border-radius: 10px;
+background: #84BFE1;
+/* height: 8rem; */
+/* padding-right: 3rem;
+padding-left: 3rem;
+padding-top: 1rem;
+padding-bottom: 1rem; */
+box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.25);
+
+  }
+  .secondTemplate .myBox2{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    border-radius: 10px;
+background: #84BFE1;
+/* height: 8rem; */
+padding: 1rem;
+/* padding-right: 3rem; */
+/* padding-left: 3rem; */
+/* padding-top: 1rem; */
+/* padding-bottom: 1rem; */
+box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.25);
+
+  }
+  .innerBox{
+padding:0.7rem 3rem 0.7rem 3rem;
+    background-color: white;
+  }
+.dots{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.firstContent{
+  padding:0.8rem 0rem 3rem 0.8rem;
+}
+.dots{
+  padding-bottom: 1.5rem;
+}
+.firstContent, .secondContent{
+  width: 50%;
+}
+.para{
+  color: #FFF;
+width: 80%;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.image1{
+  position: absolute;
+  top: 6rem;
+}
+
+.image2{
+  position: absolute;
+  right: 13rem;
+  top: 10rem;
+}
+    .firstLabel {
+
+      width: 100%;
+    }
+
+    .secondLabel {
+      width: 100%;
+    }
+
+    select {
+      color: #ABABAB;
+
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      border-radius: 5px;
+      border: 1px solid #ABABAB;
+      line-height: normal;
+      background-color: white;
+      padding: 0.5rem;
+      width: 100%;
+    }
+
+    .categories {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .buttons {
+      flex-wrap: wrap !important;
+      margin-bottom: 1.5rem;
+    }
+
+    .centerContent {
+      display: flex;
+      flex-direction: column;
+      gap: 1.3rem;
+    }
+
+    .box1 {
+      background: #1563AB !important;
+      color: white !important;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) !important;
+    }
+
+    .box {
+      border-radius: 5px;
+      border: 1px solid #ABABAB;
+      color: #6D6D6D;
+
+      font-family: Poppins;
+      /* font-size: 18px; */
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      background: #FFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem;
+      width: 20%;
+    }
+
+    .createDiv {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+.parent{
+  display: flex;
+}
+    .labelSizeWomen {
+      border-radius: 10px;
+border: 1px solid #ABABAB;
+
+background: linear-gradient(93deg, #6CB9FF 0.85%, #1563AB 100%);
+
+
+      /* padding: 0.7rem; */
+    }
+.secondContent{
+  display: flex;
+}
+.secondContent img{
+  height: 15rem;
+  width: 15rem;
+}
+    .boxes {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap !important;
+      gap: 1.5rem;
+    }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+    .medium {
+      display: flex;
+      padding: 10px 30px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 5px;
+      background: #1563AB;
+      color: #FFF;
+      border: none;
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .small,
+    .large {
+      color: #6D6D6D;
+
+      text-align: center;
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      display: flex;
+      padding: 10px 30px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 5px;
+      border: 1px solid #ABABAB;
+
+      background: #FFF;
+
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .labelSizeKids {
+      /* margin-top: 0.5rem; */
+      border-radius: 10px;
+      border: 1px solid #ABABAB;
+      padding: 0.7rem;
+    }
+
+    .centerContent {
+      padding-top: 5rem;
+      padding-left: 1rem;
+      padding-right: 6rem;
+    }
+
+    .myBtn {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .myBtn button {
+      background-color: blue;
+
+    }
+
+    .content {
+      background-color: #193652;
+      color: white;
+      padding-left: 1rem !important;
+      padding: 0.4rem;
+    }
+
+    label {
+
+      font-family: Poppins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 0.5rem;
+
+    }
+
+    .create {
+      display: flex;
+      width: 178px;
+      height: 51px;
+      padding: 10px 30px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+      border-radius: 5px;
+      background: #1563AB;
+      color: white;
+      border: none;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .svgAndInput input {
+      border-radius: 5px;
+      border: 2px solid #1563AB;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+      background: #FFF;
+      padding-left: 2rem;
+    }
+
+    .svgAndInput2 input {
+      border-radius: 5px;
+      border: 2px solid #1563AB;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+      background: #FFF;
+      padding-left: 2rem;
+    }
+
+    .svgAndInput svg {
+      position: absolute;
+
+    }
+
+    .svgAndInput2 svg {
+      position: absolute;
+
+    }
+
+    svg {
+
+      margin-right: 0.4rem;
+    }
+
+    .first {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .second {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    nav img {
+      height: 3.5rem;
+    }
+
+    nav {
+      /* border-radius: 0.3rem 0  0 0.3rem !important; */
+      margin: 0 !important;
+    }
+
+    aside {
+      margin-top: 4.90rem !important;
+
+    }
+
+    .setTemplate,
+    .setTemplate2 {
+      display: inline-flex;
+      padding: 10px 30px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .createDesign,
+    .createDesign2 {
+      display: inline-flex;
+      padding: 10px 30px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 5px;
+      border: 2px solid #1563AB;
+      color: #1563AB;
+      background: #FFF;
+    }
+
+    h2 {
+      color: #6D6D6D;
+
+      font-family: Poppins;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    .svgAndInput2 input {
+      margin-left: 0.5rem !important;
+    }
+
+    label {
+      color: #6D6D6D;
+      font-family: Poppins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    .customizeBtn {
+      display: inline-flex;
+      padding: 10px 30px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 5px;
+      background: #1563AB;
+      border: none;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      color: white;
+      text-align: center;
+      font-family: Poppins;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    @media screen and (max-width:510px) {
+      .categories {
+        flex-direction: column;
+      }
+
+      .myBtn {
+        justify-content: flex-start;
+      }
+
+      .small,
+      .large,
+      .medium {
+        /* gap: 5px !important; */
+        padding: 10px 24px;
+      }
+
+      .centerContent {
+        padding-right: 1rem;
+      }
+
+    }
+
+    @media screen and (max-width:590px) {
+      .svgAndInput2 input {
+        width: 12rem;
+      }
+    }
+
+    @media screen and (max-width:520px) {
+
+      .setTemplate2,
+      .createDesign2 {
+        margin-top: 0.5rem;
+        width: 12rem;
+        display: block !important;
+      }
+
+      .svgAndInput2 input {
+        width: 12rem;
+      }
+    }
+
+    @media screen and (min-width:320px) and (max-width:1020px) {
+
+      .setTemplate,
+      .createDesign {
+        display: none !important;
+      }
+
+      .second2 {
+        display: block !important;
+      }
+
+      nav {
+        justify-content: space-around !important;
+      }
+
+    }
+
+    @media screen and (max-width:600px) {
+
+      /* .setTemplate, .createDesign{
+display: none !important;
+     }
+    .second2{
+      display: block !important;
+    }
+     nav{
+      justify-content: space-around !important;
+     }
+      */
+      .svgAndInput {
+        display: none;
+      }
+
+      .hidingInput {
+        display: inline-block !important;
+      }
+    }
+  </style>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
+    rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="../../assets/vendor/fonts/fontawesome.css" />
+  <link rel="stylesheet" href="../../assets/vendor/fonts/tabler-icons.css" />
+  <link rel="stylesheet" href="../../assets/vendor/fonts/flag-icons.css" />
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="../../assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
+  <!-- <link rel="stylesheet" href="../../assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" /> -->
+  <link rel="stylesheet" href="../../assets/css/demo.css" />
+
+  <!-- Vendors CSS -->
+  <link rel="stylesheet" href="../../assets/vendor/libs/node-waves/node-waves.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/typeahead-js/typeahead.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/apex-charts/apex-charts.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
+
+  <!-- Page CSS -->
+
+  <!-- Helpers -->
+  <script src="../../assets/vendor/js/helpers.js"></script>
+  <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+  <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+  <script src="../../assets/vendor/js/template-customizer.js"></script>
+  <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+  <script src="../../assets/js/config.js"></script>
+</head>
+
+<body>
+  <nav
+    style="z-index: 5000 !important; width: 100% !important; display: flex; justify-content: space-around; border-radius:0rem 0rem 0.8rem 0.8rem !important; background-color: white !important;"
+    class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+    id="layout-navbar">
+    <div class="first" style="display: flex !important; align-items: center !important;">
+      <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-block">
+        <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+          <i class="ti ti-menu-2 ti-sm"></i>
+        </a>
+
+      </div>
+      <img src="/images/Jawaid label logo 1.png" alt="">
+
+      <div class="navbar-nav align-items-center">
+        <div class="nav-item navbar-search-wrapper mb-0">
+          <a class="nav-item nav-link search-toggler d-flex align-items-center px-0" href="javascript:void(0);">
+            <div class="svgAndInput"> <svg style="margin-top: 0.4rem; margin-left:0.5rem"
+                class="ti ti-search ti-md me-2" xmlns="http://www.w3.org/2000/svg" width="22" height="20"
+                viewBox="0 0 28 26" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M19.7105 17.0556C21.1653 15.18 21.851 12.8206 21.628 10.4575C21.4049 8.09429 20.29 5.90484 18.51 4.33455C16.73 2.76425 14.4186 1.93105 12.046 2.00447C9.6735 2.07789 7.41805 3.0524 5.73853 4.72975C4.05755 6.40826 3.07985 8.66459 3.00468 11.0389C2.92951 13.4133 3.76252 15.7269 5.33396 17.5084C6.90541 19.2899 9.09701 20.4051 11.4622 20.6269C13.8273 20.8486 16.188 20.1601 18.0632 18.7017L18.1134 18.7542L23.0624 23.7044C23.1708 23.8128 23.2994 23.8988 23.4411 23.9575C23.5827 24.0161 23.7345 24.0463 23.8878 24.0463C24.0411 24.0463 24.1929 24.0161 24.3345 23.9575C24.4761 23.8988 24.6048 23.8128 24.7132 23.7044C24.8216 23.596 24.9076 23.4673 24.9662 23.3257C25.0249 23.1841 25.0551 23.0323 25.0551 22.879C25.0551 22.7257 25.0249 22.5739 24.9662 22.4323C24.9076 22.2907 24.8216 22.162 24.7132 22.0536L19.763 17.1046C19.746 17.0878 19.7285 17.0714 19.7105 17.0556ZM17.2885 6.38058C17.9472 7.02864 18.4711 7.8007 18.8299 8.65224C19.1888 9.50377 19.3754 10.4179 19.3792 11.342C19.383 12.266 19.2037 13.1817 18.8519 14.0361C18.5 14.8905 17.9824 15.6668 17.329 16.3202C16.6756 16.9736 15.8993 17.4912 15.0449 17.8431C14.1904 18.195 13.2748 18.3742 12.3508 18.3704C11.4267 18.3667 10.5126 18.18 9.66102 17.8211C8.80949 17.4623 8.03742 16.9384 7.38936 16.2797C6.09427 14.9634 5.3718 13.1886 5.37932 11.342C5.38683 9.49535 6.12374 7.7265 7.42951 6.42073C8.73528 5.11495 10.5041 4.37805 12.3508 4.37053C14.1974 4.36301 15.9722 5.08549 17.2885 6.38058Z"
+                  fill="#1563AB" />
+              </svg>
+              <input type="text" placeholder="Search">
+            </div>
+            <!-- <span style="color: #1563AB !important;" class="d-none d-md-inline-block text-muted">Search</span> -->
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="second">
+      <button class="setTemplate" style="background-color: #1563AB; color: white;">Set Template</button>
+      <button class="createDesign">Create Designs</button>
+      <div class="circle" style="height: 2rem; width: 2rem; border-radius: 50%; background-color: #1563AB;;"></div>
+    </div>
+
+  </nav>
+
+  <!-- Layout wrapper -->
+  <div class="layout-wrapper layout-content-navbar">
+
+    <div class="layout-container" style="background-color: white !important;">
+      <!-- Menu -->
+
+      <aside style="color: black !important; background-color: white !important;" id="layout-menu"
+        class="layout-menu menu-vertical menu bg-menu-theme">
+        <!-- <div class="app-brand demo">
+      <a href="index.html" class="app-brand-link">
+      
+<img class="nightlifeLogo" src="/assets/img/NIGHTLIFE.png" alt="">            </a>
+
+      <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+        <i class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"></i>
+        <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
+      </a>
+    </div> -->
+
+        <div class="menu-inner-shadow"></div>
+
+        <ul class="menu-inner py-1">
+          <!-- Dashboards -->
+          <li class="menu-item active">
+            <a href="" class="menu-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 36 36" fill="none">
+                <path d="M6 6H15V18H6V6ZM6 24H15V30H6V24ZM21 18H30V30H21V18ZM21 6H30V12H21V6Z" stroke="#6D6D6D"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <div data-i18n="Dashboard">Dashboard</div>
+              <!-- <div class="badge bg-primary rounded-pill ms-auto">3</div> -->
+            </a>
+
+          </li>
+
+
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 36 36" fill="none">
+                <path
+                  d="M27 9H18C18 7.344 16.656 6 15 6H9C6.519 6 4.5 8.019 4.5 10.5V25.5C4.5 27.981 6.519 30 9 30H27C29.481 30 31.5 27.981 31.5 25.5V13.5C31.5 11.019 29.481 9 27 9ZM9 9H15C15 10.656 16.344 12 18 12H27C27.828 12 28.5 12.672 28.5 13.5H7.5V10.5C7.5 9.672 8.172 9 9 9ZM27 27H9C8.172 27 7.5 26.328 7.5 25.5V15H28.5V25.5C28.5 26.328 27.828 27 27 27Z"
+                  fill="#6D6D6D" />
+              </svg>
+              <div data-i18n="Project">Project</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="Dj-edit-profile.html" class="menu-link">
+                  <div data-i18n="Create & Edit Profile">Create & Edit Profile</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="Dj-upload-media.html" class="menu-link">
+                  <div data-i18n="Upload Media">Upload Media</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="Dj-gallery.html" class="menu-link">
+                  <div data-i18n="Gallery">Gallery</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 36 36" fill="none">
+                <path
+                  d="M30.2125 1.79999C29.7978 1.79999 29.403 1.98798 29.0713 2.31972L28.2773 3.07942L32.9416 7.74374L33.7024 6.94977C34.3659 6.28628 34.3659 5.29768 33.7024 4.63419L31.3868 2.31861C31.0551 1.98687 30.6271 1.79999 30.2125 1.79999ZM27.5165 3.73627L26.3067 4.73924L31.2829 9.71541L32.3887 8.60959L27.5165 3.73627ZM25.6499 5.53322L15.6644 15.417C15.6138 15.4587 15.5672 15.505 15.525 15.5552L15.4565 15.5895C15.3359 15.7277 15.2525 15.8944 15.2143 16.0738L13.8663 20.8078C13.8085 20.9952 13.803 21.1948 13.8502 21.3851C13.8974 21.5754 13.9956 21.7492 14.1342 21.8879C14.2729 22.0265 14.4467 22.1248 14.637 22.172C14.8273 22.2192 15.0269 22.2136 15.2143 22.1558L19.9483 20.8078C20.1055 20.7706 20.2523 20.6984 20.3778 20.5968C20.5034 20.4952 20.6045 20.3666 20.6737 20.2206L30.4889 10.5094L28.6223 8.50454V8.60849L27.3086 7.29478H27.4125L25.6499 5.53322ZM6.29922 6.29291C6.04304 6.34164 5.81232 6.47933 5.64781 6.68168C5.48331 6.88402 5.3956 7.13799 5.4002 7.39873V29.515C5.4002 29.8083 5.5167 30.0896 5.72408 30.2969C5.93146 30.5043 6.21273 30.6208 6.50601 30.6208H28.6223C28.9156 30.6208 29.1968 30.5043 29.4042 30.2969C29.6116 30.0896 29.7281 29.8083 29.7281 29.515V17.3511C29.7281 17.0578 29.6116 16.7765 29.4042 16.5691C29.1968 16.3617 28.9156 16.2452 28.6223 16.2452C28.329 16.2452 28.0477 16.3617 27.8404 16.5691C27.633 16.7765 27.5165 17.0578 27.5165 17.3511V28.4092H7.61182V8.50454H18.67C18.9632 8.50454 19.2445 8.38804 19.4519 8.18066C19.6593 7.97327 19.7758 7.69201 19.7758 7.39873C19.7758 7.10545 19.6593 6.82418 19.4519 6.6168C19.2445 6.40942 18.9632 6.29291 18.67 6.29291H6.50601C6.47138 6.29128 6.43669 6.29128 6.40206 6.29291C6.36743 6.29128 6.33275 6.29128 6.29812 6.29291H6.29922ZM17.1506 17.1443L18.6711 17.2471L18.775 18.9058L17.2545 19.3548L16.6673 18.7687L17.1506 17.1443Z"
+                  fill="#6D6D6D" />
+              </svg>
+              <div data-i18n="Create Designs">Create Designs</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="/create-layout.html" class="menu-link">
+                  <div data-i18n="Dj Availability">Dj Availability</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="saved-layout.html" class="menu-link">
+                  <div data-i18n="Dj Booking list">Dj Booking list</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="saved-layout.html" class="menu-link">
+                  <div data-i18n="Dj Booking">Dj Booking</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="saved-layout.html" class="menu-link">
+                  <div data-i18n="Event Pricing">Event Pricing</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="saved-layout.html" class="menu-link">
+                  <div data-i18n="Song Request">Song Request</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="saved-layout.html" class="menu-link">
+                  <div data-i18n="Tips Notification">Tips Notification</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+
+
+
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 36 36" fill="none">
+                <path d="M17.4 6H6V19.2H17.4V6ZM30 24H6V29.4H30V24ZM30 6H22.2V10.8H30V6ZM30 14.4H22.2V19.2H30V14.4Z"
+                  stroke="#6D6D6D" stroke-width="2" stroke-linejoin="round" />
+              </svg>
+              <div data-i18n="Set Template">Set Template</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="profile_setting.html" class="menu-link">
+                  <div data-i18n="Profile Rereate">Profile Recreate</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="password-change.html" class="menu-link">
+                  <div data-i18n="Payment Setting">Payment Setting</div>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 36 36" fill="none">
+                <path
+                  d="M32.5125 21.9973L30.2097 20.0285C30.3187 19.3606 30.375 18.6785 30.375 17.9965C30.375 17.3145 30.3187 16.6324 30.2097 15.9645L32.5125 13.9957C32.6861 13.847 32.8105 13.649 32.8689 13.4279C32.9273 13.2069 32.917 12.9733 32.8394 12.7582L32.8078 12.6668C32.1738 10.895 31.2246 9.25257 30.0058 7.81877L29.9425 7.74495C29.7947 7.57111 29.5976 7.44614 29.3774 7.38652C29.1571 7.3269 28.9239 7.33542 28.7086 7.41096L25.8503 8.42698C24.7957 7.56213 23.6179 6.8801 22.3453 6.40198L21.7933 3.4137C21.7517 3.18884 21.6426 2.98199 21.4806 2.8206C21.3186 2.65922 21.1113 2.55095 20.8863 2.51018L20.7914 2.4926C18.9597 2.16213 17.0332 2.16213 15.2015 2.4926L15.1066 2.51018C14.8816 2.55095 14.6743 2.65922 14.5123 2.8206C14.3503 2.98199 14.2412 3.18884 14.1996 3.4137L13.6441 6.41604C12.3816 6.89426 11.2059 7.57593 10.1636 8.43401L7.28433 7.41096C7.06906 7.33482 6.83571 7.32599 6.61529 7.38565C6.39488 7.4453 6.19784 7.57062 6.05035 7.74495L5.98707 7.81877C4.76977 9.25359 3.82065 10.8958 3.18511 12.6668L3.15347 12.7582C2.99527 13.1977 3.12535 13.6899 3.48043 13.9957L5.81129 15.9856C5.7023 16.6465 5.64957 17.3215 5.64957 17.993C5.64957 18.668 5.7023 19.343 5.81129 20.0004L3.48043 21.9903C3.30674 22.1389 3.18243 22.337 3.12403 22.558C3.06562 22.7791 3.07589 23.0127 3.15347 23.2278L3.18511 23.3192C3.82144 25.091 4.76363 26.7258 5.98707 28.1672L6.05035 28.241C6.1982 28.4149 6.39525 28.5398 6.61553 28.5995C6.83581 28.6591 7.06899 28.6506 7.28433 28.575L10.1636 27.552C11.2113 28.4133 12.382 29.0953 13.6441 29.5699L14.1996 32.5723C14.2412 32.7971 14.3503 33.004 14.5123 33.1654C14.6743 33.3268 14.8816 33.435 15.1066 33.4758L15.2015 33.4934C17.05 33.8256 18.9429 33.8256 20.7914 33.4934L20.8863 33.4758C21.1113 33.435 21.3186 33.3268 21.4806 33.1654C21.6426 33.004 21.7517 32.7971 21.7933 32.5723L22.3453 29.584C23.6174 29.1071 24.8018 28.4229 25.8503 27.559L28.7086 28.575C28.9238 28.6512 29.1572 28.66 29.3776 28.6003C29.598 28.5407 29.795 28.4154 29.9425 28.241L30.0058 28.1672C31.2293 26.7223 32.1714 25.091 32.8078 23.3192L32.8394 23.2278C32.9976 22.7953 32.8675 22.3032 32.5125 21.9973ZM27.7136 16.3793C27.8015 16.9102 27.8472 17.4551 27.8472 18C27.8472 18.5449 27.8015 19.0899 27.7136 19.6207L27.4816 21.0305L30.1078 23.277C29.7097 24.1942 29.2071 25.0624 28.6101 25.8645L25.3476 24.7078L24.2437 25.6149C23.4035 26.3039 22.4683 26.8453 21.4558 27.225L20.1164 27.7278L19.4871 31.1379C18.4942 31.2504 17.4917 31.2504 16.4988 31.1379L15.8695 27.7207L14.5406 27.211C13.5386 26.8313 12.607 26.2899 11.7738 25.6043L10.6699 24.6938L7.38629 25.861C6.78863 25.0559 6.28941 24.1875 5.88863 23.2735L8.54293 21.0059L8.31441 19.5996C8.23004 19.0758 8.18433 18.5344 8.18433 18C8.18433 17.4621 8.22652 16.9242 8.31441 16.4004L8.54293 14.9942L5.88863 12.7266C6.2859 11.809 6.78863 10.9442 7.38629 10.1391L10.6699 11.3063L11.7738 10.3957C12.607 9.71018 13.5386 9.16877 14.5406 8.78909L15.873 8.28635L16.5023 4.86917C17.4902 4.75666 18.4992 4.75666 19.4906 4.86917L20.1199 8.27932L21.4593 8.78206C22.4683 9.16174 23.407 9.70315 24.2472 10.3922L25.3511 11.2992L28.6136 10.1426C29.2113 10.9477 29.7105 11.816 30.1113 12.7301L27.4851 14.9766L27.7136 16.3793ZM18 11.461C14.5828 11.461 11.8125 14.2313 11.8125 17.6485C11.8125 21.0656 14.5828 23.836 18 23.836C21.4171 23.836 24.1875 21.0656 24.1875 17.6485C24.1875 14.2313 21.4171 11.461 18 11.461ZM20.7843 20.4328C20.4191 20.7991 19.9851 21.0895 19.5073 21.2874C19.0294 21.4853 18.5172 21.5868 18 21.586C16.9488 21.586 15.9609 21.1746 15.2156 20.4328C14.8493 20.0676 14.5589 19.6336 14.361 19.1558C14.1631 18.6779 14.0617 18.1657 14.0625 17.6485C14.0625 16.5973 14.4738 15.6094 15.2156 14.8641C15.9609 14.1188 16.9488 13.711 18 13.711C19.0511 13.711 20.039 14.1188 20.7843 14.8641C21.1506 15.2293 21.441 15.6633 21.6389 16.1411C21.8368 16.619 21.9383 17.1313 21.9375 17.6485C21.9375 18.6996 21.5261 19.6875 20.7843 20.4328Z"
+                  fill="#6D6D6D" />
+              </svg>
+              <div data-i18n="Settings">Settings</div>
+              <!-- <div class="badge bg-primary rounded-pill ms-auto">3</div> -->
+            </a>
+
+          </li>
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 36 36" fill="none">
+                <path
+                  d="M28.5 28.5H7.5V7.5H28.5M28.5 4.5H7.5C6.70435 4.5 5.94129 4.81607 5.37868 5.37868C4.81607 5.94129 4.5 6.70435 4.5 7.5V28.5C4.5 29.2956 4.81607 30.0587 5.37868 30.6213C5.94129 31.1839 6.70435 31.5 7.5 31.5H28.5C29.2956 31.5 30.0587 31.1839 30.6213 30.6213C31.1839 30.0587 31.5 29.2956 31.5 28.5V7.5C31.5 6.70435 31.1839 5.94129 30.6213 5.37868C30.0587 4.81607 29.2956 4.5 28.5 4.5ZM24.75 24.375C24.75 22.125 20.25 21 18 21C15.75 21 11.25 22.125 11.25 24.375V25.5H24.75M18 18.375C18.8951 18.375 19.7535 18.0194 20.3865 17.3865C21.0194 16.7535 21.375 15.8951 21.375 15C21.375 14.1049 21.0194 13.2465 20.3865 12.6135C19.7535 11.9806 18.8951 11.625 18 11.625C17.1049 11.625 16.2465 11.9806 15.6135 12.6135C14.9806 13.2465 14.625 14.1049 14.625 15C14.625 15.8951 14.9806 16.7535 15.6135 17.3865C16.2465 18.0194 17.1049 18.375 18 18.375Z"
+                  fill="#6D6D6D" />
+              </svg>
+              <div data-i18n="Account">Account</div>
+              <!-- <div class="badge bg-primary rounded-pill ms-auto">3</div> -->
+            </a>
+
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </ul>
+      </aside>
+      <!-- / Menu -->
+
+      <!-- Layout container -->
+      <div class="layout-page" style="color: black !important;">
+        <!-- Navbar -->
+
+        <!-- / Navbar -->
+
+        <!-- Content wrapper -->
+        <div class="content" style="padding-left: 3rem !important;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        </div>
+        <div class="second2" style="margin-top: 1.5rem; margin-left: 0.5rem !important; display: none;">
+          <button class="setTemplate2" style="background-color: #1563AB; color: white;">Set Template</button>
+          <button class="createDesign2" style="padding: 8px 30px !important;">Create Designs</button>
+        </div>
+        <div class="hidingInput" style="display: none;">
+          <div style="display: inline-block;" class="navbar-nav align-items-center">
+            <div class="nav-item navbar-search-wrapper mb-0">
+              <a class="nav-item nav-link search-toggler d-flex align-items-center px-0" href="javascript:void(0);">
+                <div class="svgAndInput2"> <svg style="margin-top: 0.7rem; margin-left:0.9rem;"
+                    class="ti ti-search ti-md me-2" xmlns="http://www.w3.org/2000/svg" width="22" height="20"
+                    viewBox="0 0 28 26" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M19.7105 17.0556C21.1653 15.18 21.851 12.8206 21.628 10.4575C21.4049 8.09429 20.29 5.90484 18.51 4.33455C16.73 2.76425 14.4186 1.93105 12.046 2.00447C9.6735 2.07789 7.41805 3.0524 5.73853 4.72975C4.05755 6.40826 3.07985 8.66459 3.00468 11.0389C2.92951 13.4133 3.76252 15.7269 5.33396 17.5084C6.90541 19.2899 9.09701 20.4051 11.4622 20.6269C13.8273 20.8486 16.188 20.1601 18.0632 18.7017L18.1134 18.7542L23.0624 23.7044C23.1708 23.8128 23.2994 23.8988 23.4411 23.9575C23.5827 24.0161 23.7345 24.0463 23.8878 24.0463C24.0411 24.0463 24.1929 24.0161 24.3345 23.9575C24.4761 23.8988 24.6048 23.8128 24.7132 23.7044C24.8216 23.596 24.9076 23.4673 24.9662 23.3257C25.0249 23.1841 25.0551 23.0323 25.0551 22.879C25.0551 22.7257 25.0249 22.5739 24.9662 22.4323C24.9076 22.2907 24.8216 22.162 24.7132 22.0536L19.763 17.1046C19.746 17.0878 19.7285 17.0714 19.7105 17.0556ZM17.2885 6.38058C17.9472 7.02864 18.4711 7.8007 18.8299 8.65224C19.1888 9.50377 19.3754 10.4179 19.3792 11.342C19.383 12.266 19.2037 13.1817 18.8519 14.0361C18.5 14.8905 17.9824 15.6668 17.329 16.3202C16.6756 16.9736 15.8993 17.4912 15.0449 17.8431C14.1904 18.195 13.2748 18.3742 12.3508 18.3704C11.4267 18.3667 10.5126 18.18 9.66102 17.8211C8.80949 17.4623 8.03742 16.9384 7.38936 16.2797C6.09427 14.9634 5.3718 13.1886 5.37932 11.342C5.38683 9.49535 6.12374 7.7265 7.42951 6.42073C8.73528 5.11495 10.5041 4.37805 12.3508 4.37053C14.1974 4.36301 15.9722 5.08549 17.2885 6.38058Z"
+                      fill="#1563AB" />
+                  </svg>
+                  <input style="padding: 8px 30px;" type="text" placeholder="Search">
+                </div>
+                <!-- <span style="color: #1563AB !important;" class="d-none d-md-inline-block text-muted">Search</span> -->
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="cidrcle" style="height: 2rem; display: inline-flex; width: 2rem; border-radius: 50%; background-color: #1563AB;;"></div>
+          </div> -->
+        <div class="centerContent">
+          <!-- <div class="myBtn"> <button class="customizeBtn">Customize</button></div> -->
+
+          <div class="labelSizeWomen" style="color: rgb(255, 255, 255) !important;">
+            <div class="parent">
+            <div class="firstContent"><h2 style="color: rgb(255, 255, 255) !important;">BANNERS</h2>
+          <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+     </div>
+    
+     <div class="secondContent">
+    <img class="image1" src="/images/Label.I15 (1).png" alt="">
+    <img class="image2" src="/images/Label.I15 (1).png" alt="">
+  </div>
+ </div>
+ 
+  <div class="dots">
+    <div class="1stDot" style="background-color: gray !important;
+height: 0.5rem !important;
+width: 0.5rem !important;
+border-radius: 50% !important;"></div>
+  <div class="2ndDot" style="background-color: white !important;
+height: 0.5rem !important;
+width: 0.5rem !important;
+border-radius: 50% !important;"></div>
+  <div class="3rdDot" style="background-color: white !important;
+height: 0.5rem !important;
+width: 0.5rem !important;
+border-radius: 50% !important;">
+</div>
+
+</div>
+          </div>
+
+
+          <div class="templateLibrary">
+            <div class="firstTemplate">
+              <div class="firstChild">
+                <div class="inputAndSpan">  <h2 style="display: inline; font-size: 1.5rem; font-weight: bold;">TEMPLATE LIBRARY</h2>
+                <span>View All</span></div>
+                <div class="templateContent">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                    <path d="M19.0001 34.8334C27.7448 34.8334 34.8334 27.7448 34.8334 19C34.8334 10.2553 27.7448 3.16669 19.0001 3.16669C10.2553 3.16669 3.16675 10.2553 3.16675 19C3.16675 27.7448 10.2553 34.8334 19.0001 34.8334Z" stroke="#ABABAB" stroke-width="3" stroke-linejoin="round"/>
+                    <path d="M21.375 26.125L14.25 19L21.375 11.875" stroke="#ABABAB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div class="myBox">
+                      <div class="innerBox"></div>
+                      
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                      <path d="M18.9999 3.16668C10.2552 3.16668 3.16659 10.2553 3.16659 19C3.16659 27.7448 10.2552 34.8333 18.9999 34.8333C27.7447 34.8333 34.8333 27.7448 34.8333 19C34.8333 10.2553 27.7447 3.16668 18.9999 3.16668Z" stroke="#ABABAB" stroke-width="3" stroke-linejoin="round"/>
+                      <path d="M16.625 11.875L23.75 19L16.625 26.125" stroke="#ABABAB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                </div>
+              </div>
+
+              <div class="secondChild">
+          <div class="inputAndSpan">  <h2>PROJECTS</h2>
+                <span>View All</span></div>
+                <div class="templateContent" style="gap: 1rem;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                    <path d="M19.0001 34.8334C27.7448 34.8334 34.8334 27.7448 34.8334 19C34.8334 10.2553 27.7448 3.16669 19.0001 3.16669C10.2553 3.16669 3.16675 10.2553 3.16675 19C3.16675 27.7448 10.2553 34.8334 19.0001 34.8334Z" stroke="#ABABAB" stroke-width="3" stroke-linejoin="round"/>
+                    <path d="M21.375 26.125L14.25 19L21.375 11.875" stroke="#ABABAB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div class="parentOfProject">
+                    <div class="projectBox">
+                        <img src="/images/image 6.png" alt="">
+                      
+                    </div>
+                    <div class="projectBox">
+                        <img src="/images/image 6.png" alt="">
+
+                      
+                    </div></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                      <path d="M18.9999 3.16668C10.2552 3.16668 3.16659 10.2553 3.16659 19C3.16659 27.7448 10.2552 34.8333 18.9999 34.8333C27.7447 34.8333 34.8333 27.7448 34.8333 19C34.8333 10.2553 27.7447 3.16668 18.9999 3.16668Z" stroke="#ABABAB" stroke-width="3" stroke-linejoin="round"/>
+                      <path d="M16.625 11.875L23.75 19L16.625 26.125" stroke="#ABABAB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                </div>
+              </div>
+            </div>
+            <div class="secondTemplate">
+
+              <div class="firstChild">
+                <div class="inputAndSpan"> <h2 style="display: inline;">Favourites</h2>
+                <span>View All</span></div>
+                <div class="templateContent2" style="display: flex; flex-wrap: wrap;gap:1rem; justify-content: center;">
+                 
+                    <div class="myBox2">
+                      <div class="innerBox2">
+                        <img src="images/image 8.png" alt="">
+                      </div>
+                      
+                    </div>
+                    <div class="myBox2">
+                      <div class="innerBox2">
+                        <img src="images/image 8.png" alt="">
+
+                      </div>
+                      
+                    </div>
+                    <div class="myBox2">
+                      <div class="innerBox2">
+                        <img src="images/image 8.png" alt="">
+
+                      </div>
+                      
+                    </div>
+                    <div class="myBox2">
+                      <div class="innerBox2">
+                        <img src="images/image 8.png" alt="">
+
+                      </div>
+                      
+                    </div>
+                
+                </div>
+              </div>
+
+            </div>
+          </div>
+       <div class="ourClients">
+       
+       <h2 style="color: #6D6D6D;font-family: Poppins;font-size: 32px;font-style: normal;font-weight: 800;line-height: normal;">OUR CLIENTS</h2>
+       <p style="color: var(--On-Secondary-Container30, #434659);
+       font-family: Poppins;
+       font-size: 20px;
+       font-style: normal;
+       font-weight: 400;
+       line-height: normal;">Monthly Overview</p>
+       
+        <div class="toggle">
+          <div class="toggle-title  " style="display: flex;align-items: baseline !important; justify-content: space-between;">
+           <div class="headingAndPic" style="display: flex; align-items: baseline;">
+            <div class="image" >
+              <img src="/images/Nike-Logo-PNG11 (1).png" alt="">
+            </div>
+            <h3>
+            <span class="title-name" style="color: black;">NIKE</span>
+            </h3></div>
+           <div class="pieces"><h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
+              <path d="M1 1L8 8L15 1" stroke="#6D6D6D" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="title-name" style="color: black;">1500</span>
+              <span class="title-name" style="color: black; font-size: 14px;">Pcs</span>
+              </h3></div> 
+          </div>
+          
+          <div class="toggle-inner">
+            <p>Perhaps not. Astronomers have been scouring the universe for places where water worlds might have given rise to life, from Europa and Mars in our solar system to planets many light years away. Radio telescopes have been eavesdropping on the heavens and in 1977 a signal bearing the potential hallmarks of an alien message was heard. Astronomers are now able to scan the atmospheres of alien worlds for oxygen and water. The next few decades will be an exciting time to be an alien hunter with up to 60bn potentially habitable planets in our Milky Way alone.</p>
+          </div>
+          
+          </div><!-- END OF TOGGLE -->
+
+
+          
+        <div class="toggle">
+          <div class="toggle-title  " style="display: flex;align-items: baseline !important; justify-content: space-between;">
+           <div class="headingAndPic" style="display: flex; align-items: baseline;">
+            <div class="image" >
+              <img src="/images/Zara-Logo-PNG5.png" alt="">
+            </div>
+            <h3>
+            <span class="title-name" style="color: black;">ZARA</span>
+            </h3></div>
+           <div class="pieces"><h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
+              <path d="M1 1L8 8L15 1" stroke="#6D6D6D" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="title-name" style="color: black;">1500</span>
+              <span class="title-name" style="color: black; font-size: 14px;">Pcs</span>
+              </h3></div> 
+          </div>
+          
+          <div class="toggle-inner">
+            <p>Perhaps not. Astronomers have been scouring the universe for places where water worlds might have given rise to life, from Europa and Mars in our solar system to planets many light years away. Radio telescopes have been eavesdropping on the heavens and in 1977 a signal bearing the potential hallmarks of an alien message was heard. Astronomers are now able to scan the atmospheres of alien worlds for oxygen and water. The next few decades will be an exciting time to be an alien hunter with up to 60bn potentially habitable planets in our Milky Way alone.</p>
+          </div>
+          
+          </div><!-- END OF TOGGLE -->
+
+        <div class="toggle">
+          <div class="toggle-title  " style="display: flex;align-items: baseline !important; justify-content: space-between;">
+           <div class="headingAndPic" style="display: flex; align-items: baseline;">
+            <div class="image" >
+              <img src="/images/Louis_Vuitton-Logo-PNG8.png" alt="">
+            </div>
+            <h3>
+            <span class="title-name" style="color: black;">LOUIS VUITION</span>
+            </h3></div>
+           <div class="pieces"><h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
+              <path d="M1 1L8 8L15 1" stroke="#6D6D6D" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="title-name" style="color: black;">1500</span>
+              <span class="title-name" style="color: black; font-size: 14px;">Pcs</span>
+              </h3></div> 
+          </div>
+          
+          <div class="toggle-inner">
+            <p>Perhaps not. Astronomers have been scouring the universe for places where water worlds might have given rise to life, from Europa and Mars in our solar system to planets many light years away. Radio telescopes have been eavesdropping on the heavens and in 1977 a signal bearing the potential hallmarks of an alien message was heard. Astronomers are now able to scan the atmospheres of alien worlds for oxygen and water. The next few decades will be an exciting time to be an alien hunter with up to 60bn potentially habitable planets in our Milky Way alone.</p>
+          </div>
+          
+          </div><!-- END OF TOGGLE -->
+
+        <div class="toggle">
+          <div class="toggle-title  " style="display: flex;align-items: baseline !important; justify-content: space-between;">
+           <div class="headingAndPic" style="display: flex; align-items: baseline;">
+            <div class="image" >
+              <img src="/images/Puma-Logo-PNG4.png" alt="">
+            </div>
+            <h3>
+            <span class="title-name" style="color: black;">PUMA</span>
+            </h3></div>
+           <div class="pieces"><h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
+              <path d="M1 1L8 8L15 1" stroke="#6D6D6D" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="title-name" style="color: black;">1500</span>
+              <span class="title-name" style="color: black; font-size: 14px;">Pcs</span>
+              </h3></div> 
+          </div>
+          
+          <div class="toggle-inner">
+            <p>Perhaps not. Astronomers have been scouring the universe for places where water worlds might have given rise to life, from Europa and Mars in our solar system to planets many light years away. Radio telescopes have been eavesdropping on the heavens and in 1977 a signal bearing the potential hallmarks of an alien message was heard. Astronomers are now able to scan the atmospheres of alien worlds for oxygen and water. The next few decades will be an exciting time to be an alien hunter with up to 60bn potentially habitable planets in our Milky Way alone.</p>
+          </div>
+          
+          </div><!-- END OF TOGGLE -->
+
+        <div class="toggle">
+          <div class="toggle-title  " style="display: flex;align-items: baseline !important; justify-content: space-between;">
+           <div class="headingAndPic" style="display: flex; align-items: baseline;">
+            <div class="image" >
+              <img src="/images/Adidas_Logo_PNG_(13).png" alt="">
+            </div>
+            <h3>
+            <span class="title-name" style="color: black;">ADIDAS</span>
+            </h3></div>
+           <div class="pieces"><h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
+              <path d="M1 1L8 8L15 1" stroke="#6D6D6D" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="title-name" style="color: black;">1500</span>
+              <span class="title-name" style="color: black; font-size: 14px;">Pcs</span>
+              </h3></div> 
+          </div>
+          
+          <div class="toggle-inner">
+            <p>Perhaps not. Astronomers have been scouring the universe for places where water worlds might have given rise to life, from Europa and Mars in our solar system to planets many light years away. Radio telescopes have been eavesdropping on the heavens and in 1977 a signal bearing the potential hallmarks of an alien message was heard. Astronomers are now able to scan the atmospheres of alien worlds for oxygen and water. The next few decades will be an exciting time to be an alien hunter with up to 60bn potentially habitable planets in our Milky Way alone.</p>
+          </div>
+          
+          </div><!-- END OF TOGGLE -->
+
+        <div class="toggle">
+          <div class="toggle-title  " style="display: flex;align-items: baseline !important; justify-content: space-between;">
+           <div class="headingAndPic" style="display: flex; align-items: baseline;">
+            <div class="image" >
+              <img src="/images/Nike-Logo-PNG11 (1).png" alt="">
+            </div>
+            <h3>
+            <span class="title-name" style="color: black;">NIKE</span>
+            </h3></div>
+           <div class="pieces"><h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
+              <path d="M1 1L8 8L15 1" stroke="#6D6D6D" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="title-name" style="color: black;">1500</span>
+              <span class="title-name" style="color: black; font-size: 14px;">Pcs</span>
+              </h3></div> 
+          </div>
+          
+          <div class="toggle-inner">
+            <p>Perhaps not. Astronomers have been scouring the universe for places where water worlds might have given rise to life, from Europa and Mars in our solar system to planets many light years away. Radio telescopes have been eavesdropping on the heavens and in 1977 a signal bearing the potential hallmarks of an alien message was heard. Astronomers are now able to scan the atmospheres of alien worlds for oxygen and water. The next few decades will be an exciting time to be an alien hunter with up to 60bn potentially habitable planets in our Milky Way alone.</p>
+          </div>
+          
+          </div><!-- END OF TOGGLE -->
+          
+       </div>
+          <div class="createDiv"> <button class="create">Create</button></div>
+        </div>
+        <!-- <div class="addProject" id="addProject" style="display: none;">
+            Hello
+          </div> -->
+        <!-- Content wrapper -->
+      </div>
+      <!-- / Layout page -->
+    </div>
+
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
+
+    <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+    <div class="drag-target"></div>
+  </div>
+  <!-- / Layout wrapper -->
+
+  <!-- Core JS -->
+  <!-- build:js assets/vendor/js/core.js -->
+
+  <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="../../assets/vendor/libs/popper/popper.js"></script>
+  <script src="../../assets/vendor/js/bootstrap.js"></script>
+  <script src="../../assets/vendor/libs/node-waves/node-waves.js"></script>
+  <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="../../assets/vendor/libs/hammer/hammer.js"></script>
+  <script src="../../assets/vendor/libs/i18n/i18n.js"></script>
+  <script src="../../assets/vendor/libs/typeahead-js/typeahead.js"></script>
+  <script src="../../assets/vendor/js/menu.js"></script>
+
+  <!-- endbuild -->
+
+  <!-- Vendors JS -->
+  <script src="../../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+
+  <!-- Main JS -->
+  <script src="../../assets/js/main.js"></script>
+
+  <!-- Page JS -->
+  <script src="../../assets/js/dashboards-crm.js"></script>
+  <script src="../../assets/js/product.js"></script>
+  <script>
+    if( jQuery(".toggle .toggle-title").hasClass('active') ){
+		jQuery(".toggle .toggle-title.active").closest('.toggle').find('.toggle-inner').show();
+	}
+	jQuery(".toggle .toggle-title").click(function(){
+		if( jQuery(this).hasClass('active') ){
+			jQuery(this).removeClass("active").closest('.toggle').find('.toggle-inner').slideUp(200);
+		}
+		else{	jQuery(this).addClass("active").closest('.toggle').find('.toggle-inner').slideDown(200);
+		}
+	});
+  </script>
+</body>
+
+</html>
