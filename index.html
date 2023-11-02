@@ -1,63 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jb Intro</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="completePage">
-<div class="nav">
-    <div class="first">
-            <img class="image" src="./images/Jawaid label logo 1.png"  alt="">
-            <div class="buttons">
-                <button class="login" onclick="window.location.href='/login.html'">Login</button>
-                <button class="getstarted">Get Started</button>
-              </div>        <span class="dots" style="font-size: 2rem; font-weight: bold; display: none;">...</span>
+        <div class="nav">
+            <div class="first">
+                <img class="image" src="./images/Jawaid label logo 1.png" alt="">
+                <div class="buttons">
+                    <button class="login" onclick="window.location.href='./login.html'">Login</button>
+                    <button class="getstarted">Get Started</button>
+                </div> <span class="dots" style="font-size: 2rem; font-weight: bold; display: none;">...</span>
+            </div>
+        </div>
+        <div class="second">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua</p>
         </div>
     </div>
-    <div class="second">
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+    <div class="mainContainer">
+        <div class="title">
+            <p> Create your Labels
+                for your brand</p>
+        </div>
+        <div class="para">
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+        </div>
+        <div class="button" style="margin-top: 1.5rem;"><button>Get Started</button></div>
+        <p class="para2">Lorem ipsum dolor sit amet,</p>
+        <div class="images">
+            <img class="image1" src="./images/Label.I15 (1).png" alt="">
+            <img class="image2" src="./images/Label.M03 (1).png" alt="">
+            <img class="image3" src="./images/Label.H02 (1).png" alt="">
+            <img class="image4" src="./images/Label.K03 (1).png" alt="">
+        </div>
+        <div class="footer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+        </div>
     </div>
-</div>
-
-   <div class="mainContainer">
-<div class="title">
-   <p> Create your Labels 
-for your brand</p>
-</div>
-<div class="para">
-   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
-</div>
-<div class="button" style="margin-top: 1.5rem;"><button>Get Started</button></div>
-<p class="para2">Lorem ipsum dolor sit amet,</p> <div class="images">
-    <img class="image1" src="./images/Label.I15 (1).png" alt="">
-    <img class="image2" src="./images/Label.M03 (1).png" alt="">
-    <img class="image3" src="./images/Label.H02 (1).png" alt="">
-    <img class="image4" src="./images/Label.K03 (1).png" alt="">
-</div> 
-<div class="footer">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
-</div>
-    </div> 
-    <div class="buttonsDiv" style="display: none;"><button class="loginButton">Login</button><button class="getStartedButton">Get Started</button></div>
+    <div class="buttonsDiv" style="display: none;"><button class="loginButton">Login</button><button
+            class="getStartedButton">Get Started</button></div>
 
     </div>
 
     <script>
         let buttonsDiv = document.querySelector(".buttonsDiv")
         let dots = document.querySelector(".dots")
-        dots.addEventListener("click", ()=>{
-            if(buttonsDiv.style.display === "none"){
-buttonsDiv.style.display = "flex"
-        }else{
-buttonsDiv.style.display = "none"
+        dots.addEventListener("click", () => {
+            if (buttonsDiv.style.display === "none") {
+                buttonsDiv.style.display = "flex"
+            } else {
+                buttonsDiv.style.display = "none"
 
-        }
+            }
         })
-        
+
     </script>
 </body>
+
 </html>
