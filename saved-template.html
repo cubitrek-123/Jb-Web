@@ -15,28 +15,195 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.png" />
   <style>
-    @media screen and (max-width:500px) {
+    .allShapes {
+      position: relative;
+    }
+
+    .createDesign2 {
+      padding: 8px 30px;
+    }
+
+    @media screen and (max-width:780px) {
+      .labelSizeWomen {
+        min-height: 30rem !important;
+      }
+
+      .firstContent,
+      .para {
+        width: 100% !important;
+      }
+
+      .parent {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+      }
+    }
+
+    @media screen and (max-width:1074px) {
       .templateLibrary {
+        flex-wrap: wrap;
         justify-content: center;
-        flex-wrap: wrap;
+      }
+    }
+
+    @media screen and (max-width:366px) {
+      .cardButtons {
+        gap: 0.5rem !important;
+      }
+
+      .useTemplateBtn {
+        width: 183px !important;
+      }
+
+      .firstLibrary,
+      .secondLibrary,
+      .thirdLibrary {
+        width: 294px !important;
+      }
+    }
+
+    @media screen and (max-width:510px) {
+      .categories {
+        flex-direction: column;
+      }
+
+      .myBtn {
+        justify-content: flex-start;
+      }
+
+      .small,
+      .large,
+      .medium {
+        /* gap: 5px !important; */
+        padding: 10px 24px;
+      }
+
+      .centerContent {
+        padding-right: 1rem;
+      }
+
+    }
+
+    @media screen and (max-width:590px) {
+      .svgAndInput2 input {
+        width: 12rem;
+      }
+    }
+
+    @media screen and (max-width:346px) {
+
+      .setTemplate2 {
+        padding: 10px 20px !important;
+      }
+
+      .createDesign2 {
+        padding: 10px 20px !important;
 
       }
     }
 
-    @media screen and (min-width:800px) and (max-width:1100px) {
-      .templateLibrary {
-        flex-wrap: wrap;
+    @media screen and (max-width:360px) {
+      .secondContent {
+        max-width: 292px !important;
+      }
+
+      .shape1 {
+        width: 9.8rem !important;
+        height: 6rem !important;
+        left: 5px !important;
+      }
+
+      .shape2 {
+        width: 5.7rem !important;
+        height: 9.7rem !important;
+        top: 107px !important;
+        left: 5px !important;
+      }
+
+      .shape3 {
+        top: 6.7rem !important;
+        left: 103px !important;
+        width: 3.7rem !important;
+        height: 4rem !important;
+
+      }
+
+      .shape4 {
+        top: 8.3rem !important;
+        width: 7rem !important;
+        height: 10.7rem !important;
+        left: 168px !important;
+        top: 0px !important;
+      }
+
+      .shape5 {
+        width: 11rem !important;
+        height: 5rem !important;
+        left: 103px !important;
+        top: 180px !important;
 
       }
     }
 
-    @media screen and (max-width:800px) {
-      .templateLibrary {
-        justify-content: center;
-        flex-wrap: wrap;
 
+    @media screen and (max-width:520px) {
+
+      .setTemplate2,
+      .createDesign2 {
+        margin-top: 0.5rem;
+        display: block !important;
+      }
+
+      .svgAndInput2 input {
+        width: 12rem;
       }
     }
+
+    @media screen and (min-width:320px) and (max-width:1020px) {
+
+      .setTemplate,
+      .createDesign {
+        display: none !important;
+      }
+
+      .second2 {
+        display: flex !important;
+        gap: 1rem;
+      }
+
+      nav {
+        justify-content: space-around !important;
+      }
+
+    }
+
+    @media screen and (max-width:600px) {
+
+      /* .setTemplate, .createDesign{
+display: none !important;
+     }
+    .second2{
+      display: block !important;
+    }
+     nav{
+      justify-content: space-around !important;
+     }
+      */
+      .svgAndInput {
+        display: none;
+      }
+
+      .hidingInput {
+        display: inline-block !important;
+      }
+    }
+
+
+
+
+
+
+
 
     /* Styles for page */
     .myCard {
@@ -127,7 +294,7 @@
 
     .viewDetailsBtn {
       display: flex;
-      width: 214px;
+      /* width: 214px; */
       height: 36px;
       padding: 10px 30px;
       justify-content: center;
@@ -144,7 +311,6 @@
 
     .deleteBtn {
       display: flex;
-      width: 80px;
       height: 36px;
       padding: 10px 30px;
       justify-content: center;
@@ -381,23 +547,23 @@ padding-bottom: 1rem; */
 
 
 
+
     .shape1 {
       /* height: 4rem;
   width: 8rem; */
       position: absolute;
       width: 12rem;
       height: 7.5rem;
-
     }
 
     .shape2 {
       position: absolute;
-      right: -1rem;
-      width: 7rem;
-      height: 12.4rem;
+      /* right: -1rem; */
+      width: 6rem;
+      height: 9.7rem;
       /* height: 8rem;
   width: 4rem; */
-
+      top: 130px;
 
     }
 
@@ -409,8 +575,9 @@ padding-bottom: 1rem; */
 
     .shape3 {
       position: absolute;
-      left: 6.8rem;
-      top: 8.4rem;
+      /* left: 6.8rem; */
+      top: 8.2rem;
+      left: 107px;
       width: 5.2rem;
       height: 4rem;
       /* height: 2.5rem;
@@ -422,21 +589,23 @@ padding-bottom: 1rem; */
     .shape4 {
       position: absolute;
       /* display: none; */
-      bottom: -10px;
+      /* bottom: -10px; */
       top: 8.3rem;
-      width: 6rem;
-      height: 9.7rem;
+      width: 7rem;
+      height: 12.2rem;
+      left: 202px;
+      top: 0px;
       box-shadow: 27px 27px 27px;
     }
 
     .shape5 {
       position: absolute;
       box-shadow: 27px 27px 27px;
-      width: 13.3rem;
+      width: 13.1rem;
       height: 5rem;
-      bottom: -7.5rem;
-      left: 6.8rem;
-
+      /* bottom: -7.5rem; */
+      left: 107px;
+      top: 203px;
     }
 
 
@@ -457,7 +626,7 @@ padding-bottom: 1rem; */
 
     .secondContent {
 
-      max-width: 300px;
+      max-width: 317px;
       width: 100%;
     }
 
@@ -838,7 +1007,6 @@ padding-bottom: 1rem; */
       .setTemplate2,
       .createDesign2 {
         margin-top: 0.5rem;
-        width: 12rem;
         display: block !important;
       }
 
@@ -854,9 +1022,9 @@ padding-bottom: 1rem; */
         display: none !important;
       }
 
-      .second2 {
+      /* .second2 {
         display: block !important;
-      }
+      } */
 
       nav {
         justify-content: space-around !important;
@@ -1174,7 +1342,7 @@ display: none !important;
         </div>
         <div class="second2" style="margin-top: 1.5rem; margin-left: 0.5rem !important; display: none;">
           <button class="setTemplate2" style="background-color: #1563AB; color: white;">Set Template</button>
-          <button class="createDesign2" style="padding: 8px 30px !important;">Create Designs</button>
+          <button class="createDesign2">Create Designs</button>
         </div>
         <div class="hidingInput" style="display: none;">
           <div style="display: inline-block;" class="navbar-nav align-items-center">
@@ -1198,7 +1366,6 @@ display: none !important;
           </div> -->
         <div class="centerContent" style="margin-bottom:3rem;  ">
           <!-- <div class="myBtn"> <button class="customizeBtn">Customize</button></div> -->
-
           <div class="labelSizeWomen" style="color: rgb(255, 255, 255) !important;">
             <div class="parent">
               <div class="firstContent">
@@ -1247,7 +1414,7 @@ display: none !important;
                 <h2>Women Label Size</h2>
                 <p>Lorem ipsum dolor sit amet,</p>
                 <div class="cardButtons">
-                  <button class="viewDetailsBtn">Use this template</button>
+                  <button class="viewDetailsBtn">View Details</button>
                   <button class="deleteBtn">Delete</button>
                 </div>
               </div>
@@ -1260,7 +1427,7 @@ display: none !important;
                 <h2>Women Label Size</h2>
                 <p>Lorem ipsum dolor sit amet,</p>
                 <div class="cardButtons">
-                  <button class="viewDetailsBtn">Use this template</button>
+                  <button class="viewDetailsBtn">View Details</button>
                   <button class="deleteBtn">Delete</button>
                 </div>
               </div>
