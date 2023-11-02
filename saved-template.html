@@ -15,6 +15,29 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.png" />
   <style>
+    @media screen and (max-width:500px) {
+      .templateLibrary {
+        justify-content: center;
+        flex-wrap: wrap;
+
+      }
+    }
+
+    @media screen and (min-width:800px) and (max-width:1100px) {
+      .templateLibrary {
+        flex-wrap: wrap;
+
+      }
+    }
+
+    @media screen and (max-width:800px) {
+      .templateLibrary {
+        justify-content: center;
+        flex-wrap: wrap;
+
+      }
+    }
+
     /* Styles for page */
     .myCard {
       padding: 1rem 1.2rem;
@@ -47,30 +70,45 @@
     }
 
     .smallBox1 {
+
+      /* width: 151px; */
+      /* height: 151px; */
+      width: 16rem;
+      height: 9rem;
+      /* padding: 4rem; */
+      padding: 1rem;
+      border-radius: 5px;
       display: flex;
       justify-content: center;
       background-color: white;
-      margin-top: 1.5rem;
-      width: 151px;
-      height: 151px;
+      margin-top: 2rem;
+
     }
 
     .smallBox2 {
+      border-radius: 5px;
+
       display: flex;
       justify-content: center;
       background-color: white;
-      margin-top: 2.8rem;
-      width: 160px;
-      height: 111px;
+      margin-top: 2rem;
+
+      width: 16rem;
+      height: 9rem;
     }
 
     .smallBox3 {
       display: flex;
+      width: 16rem;
+      height: 9rem;
       justify-content: center;
       background-color: white;
       margin-top: 1.5rem;
-      width: 131px;
-      height: 171px;
+      width: 16rem;
+      height: 9rem;
+      margin-top: 2rem;
+      border-radius: 5px;
+
     }
 
     .firstLibrary,
@@ -87,7 +125,7 @@
       box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.25);
     }
 
-    .useTemplateBtn {
+    .viewDetailsBtn {
       display: flex;
       width: 214px;
       height: 36px;
@@ -977,13 +1015,13 @@ display: none !important;
                   <div data-i18n="Zara">Zara</div>
                 </a>
                 <ul class="menu-sub">
-                  <li class="menu-item active">
-                    <a href="" class="menu-link">
+                  <li class="menu-item ">
+                    <a href="template-library.html" class="menu-link">
                       <div data-i18n="Template">Template</div>
                     </a>
                   </li>
-                  <li class="menu-item">
-                    <a href="saved-template.html" class="menu-link">
+                  <li class="menu-item active">
+                    <a href="" class="menu-link">
                       <div data-i18n="Labels">Labels</div>
                     </a>
                   </li>
@@ -1091,8 +1129,6 @@ display: none !important;
 
           </li>
 
-
-
           <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link ">
               <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 36 36" fill="none">
@@ -1105,6 +1141,8 @@ display: none !important;
             </a>
 
           </li>
+
+
 
 
 
@@ -1158,7 +1196,7 @@ display: none !important;
         </div>
         <!-- <div class="cidrcle" style="height: 2rem; display: inline-flex; width: 2rem; border-radius: 50%; background-color: #1563AB;;"></div>
           </div> -->
-        <div class="centerContent">
+        <div class="centerContent" style="margin-bottom:3rem;  ">
           <!-- <div class="myBtn"> <button class="customizeBtn">Customize</button></div> -->
 
           <div class="labelSizeWomen" style="color: rgb(255, 255, 255) !important;">
@@ -1184,43 +1222,50 @@ display: none !important;
 
           </div>
 
-          <h2>TEMPLATE LIBRARY</h2>
+          <h2
+            style="color: #6D6D6D;font-size: 32px;font-family: Poppins;font-weight: 700;line-height: 52.50px;word-wrap: break-word">
+            LABEL LIBRARY</h2>
           <div class="templateLibrary">
             <div class="firstLibrary">
-              <div class="smallBox1"></div>
+              <div class="smallBox1">
+                <img src="./images/image 6.png" alt="">
+              </div>
               <div class="myCard">
                 <h2>Women Label Size</h2>
                 <p>Lorem ipsum dolor sit amet,</p>
                 <div class="cardButtons">
-                  <button class="useTemplateBtn">Use this template</button>
+                  <button class="viewDetailsBtn">View Details</button>
                   <button class="deleteBtn">Delete</button>
                 </div>
               </div>
             </div>
             <div class="secondLibrary">
-              <div class="smallBox2"></div>
+              <div class="smallBox2">
+                <img src="./images/image 7.png" alt="">
+              </div>
               <div class="myCard">
                 <h2>Women Label Size</h2>
                 <p>Lorem ipsum dolor sit amet,</p>
                 <div class="cardButtons">
-                  <button class="useTemplateBtn">Use this template</button>
+                  <button class="viewDetailsBtn">Use this template</button>
                   <button class="deleteBtn">Delete</button>
                 </div>
               </div>
             </div>
             <div class="thirdLibrary">
-              <div class="smallBox3"></div>
+              <div class="smallBox3">
+                <img src="./images/image 8.png" alt="">
+              </div>
               <div class="myCard">
                 <h2>Women Label Size</h2>
                 <p>Lorem ipsum dolor sit amet,</p>
                 <div class="cardButtons">
-                  <button class="useTemplateBtn">Use this template</button>
+                  <button class="viewDetailsBtn">Use this template</button>
                   <button class="deleteBtn">Delete</button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="createDiv"> <button class="create">Create</button></div>
         </div>
         <!-- <div class="addProject" id="addProject" style="display: none;">
             Hello
@@ -1275,6 +1320,8 @@ display: none !important;
       }
     });
   </script>
+  <!-- Main JS -->
+
 </body>
 
 </html>

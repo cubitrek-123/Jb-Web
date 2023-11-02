@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed" dir="ltr" data-theme="theme-default"
-  data-assets-path="../../assets/" data-template="vertical-menu-template">
+  data-assets-path="./assets/" data-template="vertical-menu-template">
 
 <head>
   <meta charset="utf-8" />
@@ -13,316 +13,349 @@
   <meta name="description" content="" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="../../assets/img/favicon/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.png" />
   <style>
-/* Styles for page */ 
-@lightgrey: #dddddd;
-@textcolor: #4B4B4B;
+    /* Styles for page */
+    @lightgrey: #dddddd;
+    @textcolor: #4B4B4B;
 
-.container {
-  width: 70%;
-  margin: 150px auto;
-}
-
-body {
-  color: @textcolor;
-  font-family: sans-serif;
-
-  a {
-    cursor: pointer;
-    color: @textcolor;
-    text-decoration: none;
-  }
-
-  section {
-    margin-bottom: 90px;
-
-    h1 {
-      text-transform: uppercase;
-      text-align: center;
-      font-weight: normal;
-      letter-spacing: 10px;
-      font-size: 25px;
-      line-height: 1.5;
+    .container {
+      width: 70%;
+      margin: 150px auto;
     }
 
-    p, a {
-      text-align: center;
-      letter-spacing: 3px;
+    body {
+      color: @textcolor;
+      font-family: sans-serif;
+
+      a {
+        cursor: pointer;
+        color: @textcolor;
+        text-decoration: none;
+      }
+
+      section {
+        margin-bottom: 90px;
+
+        h1 {
+          text-transform: uppercase;
+          text-align: center;
+          font-weight: normal;
+          letter-spacing: 10px;
+          font-size: 25px;
+          line-height: 1.5;
+        }
+
+        p,
+        a {
+          text-align: center;
+          letter-spacing: 3px;
+        }
+      }
     }
-  }
-}
 
-span {
-  letter-spacing: 0px;
-}
+    span {
+      letter-spacing: 0px;
+    }
 
-p {
-  font-weight: 200;
-  line-height: 1.5;
-  font-size: 14px;
-}
-
-/* Styles for Accordion */
-
-.toggle {
-  &:last-child {
-    border-bottom: 1px solid lightgrey;
-  }
-
-  .toggle-title {
-    position: relative;
-    display: block;
-    border-top: 1px solid lightgrey;
-    margin-bottom: 6px;
-
-    h3 {
-      font-size: 20px;
-      margin: 0;
-      line-height: 1;
-      cursor: pointer;
+    p {
       font-weight: 200;
+      line-height: 1.5;
+      font-size: 14px;
     }
 
-    &.active h3 {}
+    /* Styles for Accordion */
 
-    .toggle-inner {
-      padding: 7px 25px 10px 25px;
-      display: none;
-      margin: -7px 0 6px;
-
-      div {
-        max-width: 100%;
+    .toggle {
+      &:last-child {
+        border-bottom: 1px solid lightgrey;
       }
 
       .toggle-title {
-        .title-name {
-          display: block;
-          padding: 25px 25px 14px;
+        position: relative;
+        display: block;
+        border-top: 1px solid lightgrey;
+        margin-bottom: 6px;
+
+        h3 {
+          font-size: 20px;
+          margin: 0;
+          line-height: 1;
+          cursor: pointer;
+          font-weight: 200;
         }
 
-        a i {
-          font-size: 22px;
-          margin-right: 5px;
-        }
+        &.active h3 {}
 
-        i {
-          position: absolute;
-          background: url('http://arielbeninca.com/Storage/plus_minus.png') 0px -24px no-repeat;
-          width: 24px;
-          height: 24px;
-          -webkit-transition: all 0.3s ease;
-          -moz-transition: all 0.3s ease;
-          -o-transition: all 0.3s ease;
-          -ms-transition: all 0.3s ease;
-          transition: all 0.3s ease;
-          margin: 20px;
-          right: 0;
-        }
+        .toggle-inner {
+          padding: 7px 25px 10px 25px;
+          display: none;
+          margin: -7px 0 6px;
 
-        &.active i {
-          background: url('http://arielbeninca.com/Storage/plus_minus.png') 0px 0px no-repeat;
+          div {
+            max-width: 100%;
+          }
+
+          .toggle-title {
+            .title-name {
+              display: block;
+              padding: 25px 25px 14px;
+            }
+
+            a i {
+              font-size: 22px;
+              margin-right: 5px;
+            }
+
+            i {
+              position: absolute;
+              background: url('http://arielbeninca.com/Storage/plus_minus.png') 0px -24px no-repeat;
+              width: 24px;
+              height: 24px;
+              -webkit-transition: all 0.3s ease;
+              -moz-transition: all 0.3s ease;
+              -o-transition: all 0.3s ease;
+              -ms-transition: all 0.3s ease;
+              transition: all 0.3s ease;
+              margin: 20px;
+              right: 0;
+            }
+
+            &.active i {
+              background: url('http://arielbeninca.com/Storage/plus_minus.png') 0px 0px no-repeat;
+            }
+          }
         }
       }
     }
-  }
-}
 
-.ourClients{
-  padding-bottom: 0.8rem;
-  padding-top: 1rem;
-  padding-left: 0.8rem;
-  padding-right: 0.8rem;
-  border-radius: 10px;
-border: 1px solid #ABABAB;
-}
-.ourClients p{
-  margin-top: 0.4rem;
-  margin-bottom: 1rem;
-}
-.headingAndPic{
- gap: 1.5rem !important;
-}
-.image{
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
- height: 3.5rem; 
- width: 3.5rem; 
- border-radius: 50%; 
- border:1px solid gray; 
- /* padding: 1rem; */
-}
+    .ourClients {
+      padding-bottom: 0.8rem;
+      padding-top: 1rem;
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
+      border-radius: 10px;
+      border: 1px solid #ABABAB;
+    }
+
+    .ourClients p {
+      margin-top: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .headingAndPic {
+      gap: 1.5rem !important;
+    }
+
+    .image {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3.5rem;
+      width: 3.5rem;
+      border-radius: 50%;
+      border: 1px solid gray;
+      /* padding: 1rem; */
+    }
 
     .nightlifeLogo {
       height: 9rem;
       width: 11rem;
     }
-    .inputAndSpan{
+
+    .inputAndSpan {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-  .templateLibrary{
-    display: flex;
-    gap: 1.5rem;
-  }
-  .secondTemplate .firstChild{
-    height: 100%;
-  }
-  .firstChild, .secondChild{
-    border-radius: 10px;
-border: 1px solid #ABABAB;
-  }
-  .templateLibrary h2{
-    color: #6D6D6D !important;
 
-font-family: Poppins;
-/* font-size: 24px; */
-font-style: normal;
-font-weight: 800;
-line-height: normal;
-text-transform: uppercase;
-    /* color: black !important; */
-  }
-  .templateContent{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1rem !important;
+    .templateLibrary {
+      display: flex;
+      gap: 1.5rem;
+    }
 
-  }
-  .secondTemplate .firstChild{
-    padding: 0.5rem 1.5rem 0.5rem 1.5rem ;
-  }
-  .templateContent2{
-    display: flex;
-    align-items: center;
-    margin-top: 1rem !important;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    .secondTemplate .firstChild {
+      height: 100%;
+    }
 
-  }
-  
-  .firstTemplate .firstChild, .secondChild{
-    padding: 1.3rem 1.3rem 1.3rem 1.3rem;
+    .firstChild,
+    .secondChild {
+      border-radius: 10px;
+      border: 1px solid #ABABAB;
+    }
 
-  }
-  .firstTemplate{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    border-radius: 10px;
-  }
-  .secondTemplate span{
-    color: #1563AB;
-    margin-bottom: 0.5rem;
+    .templateLibrary h2 {
+      color: #6D6D6D !important;
 
-  }
-  .firstTemplate span{
-    color: #1563AB;
-    margin-bottom: 0.3rem;
+      font-family: Poppins;
+      /* font-size: 24px; */
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      text-transform: uppercase;
+      /* color: black !important; */
+    }
 
-font-family: Poppins;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-  }
-  .firstChild, .secondChild{
-border: 1px solid #ABABAB;
+    .templateContent {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem !important;
 
-  }
-  .myBox{
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    border-radius: 10px;
-background: #84BFE1;
-height: 8rem;
-padding-right: 3rem;
-padding-left: 3rem;
-padding-top: 1rem;
-padding-bottom: 1rem;
-box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.25);
+    }
 
-  }
-  .parentOfProject{
-    display: flex;
-    gap: 1rem;
-  }
-  /* .projectBox img{
+    .secondTemplate .firstChild {
+      padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    }
+
+    .templateContent2 {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem !important;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+    }
+
+    .firstTemplate .firstChild,
+    .secondChild {
+      padding: 1.3rem 1.3rem 1.3rem 1.3rem;
+
+    }
+
+    .firstTemplate {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      border-radius: 10px;
+    }
+
+    .secondTemplate span {
+      color: #1563AB;
+      margin-bottom: 0.5rem;
+
+    }
+
+    .firstTemplate span {
+      color: #1563AB;
+      margin-bottom: 0.3rem;
+
+      font-family: Poppins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    .firstChild,
+    .secondChild {
+      border: 1px solid #ABABAB;
+
+    }
+
+    .myBox {
+      display: flex;
+      justify-content: center;
+      /* align-items: center; */
+      border-radius: 10px;
+      background: #84BFE1;
+      height: 8rem;
+      padding-right: 3rem;
+      padding-left: 3rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.25);
+
+    }
+
+    .parentOfProject {
+      display: flex;
+      gap: 1rem;
+    }
+
+    /* .projectBox img{
     width: 1rem;
   } */
-  .projectBox{
-    display: flex;
-    justify-content: center;
-padding:0.5rem 1.4rem ;
-    /* align-items: center; */
-    border-radius: 10px;
-background: #84BFE1;
-/* height: 8rem; */
-/* padding-right: 3rem;
+    .projectBox {
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem 1.4rem;
+      /* align-items: center; */
+      border-radius: 10px;
+      background: #84BFE1;
+      /* height: 8rem; */
+      /* padding-right: 3rem;
 padding-left: 3rem;
 padding-top: 1rem;
 padding-bottom: 1rem; */
-box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.25);
 
-  }
-  .secondTemplate .myBox2{
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    border-radius: 10px;
-background: #84BFE1;
-/* height: 8rem; */
-padding: 1rem;
-/* padding-right: 3rem; */
-/* padding-left: 3rem; */
-/* padding-top: 1rem; */
-/* padding-bottom: 1rem; */
-box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.25);
+    }
 
-  }
-  .innerBox{
-padding:0.7rem 3rem 0.7rem 3rem;
-    background-color: white;
-  }
-.dots{
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
+    .secondTemplate .myBox2 {
+      display: flex;
+      justify-content: center;
+      /* align-items: center; */
+      border-radius: 10px;
+      background: #84BFE1;
+      /* height: 8rem; */
+      padding: 1rem;
+      /* padding-right: 3rem; */
+      /* padding-left: 3rem; */
+      /* padding-top: 1rem; */
+      /* padding-bottom: 1rem; */
+      box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.25);
 
-.firstContent{
-  padding:0.8rem 0rem 3rem 0.8rem;
-}
-.dots{
-  padding-bottom: 1.5rem;
-}
-.firstContent, .secondContent{
-  width: 50%;
-}
-.para{
-  color: #FFF;
-width: 80%;
-font-family: Poppins;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-}
-.image1{
-  position: absolute;
-  top: 6rem;
-}
+    }
 
-.image2{
-  position: absolute;
-  right: 13rem;
-  top: 10rem;
-}
+    .innerBox {
+      padding: 0.7rem 3rem 0.7rem 3rem;
+      background-color: white;
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .firstContent {
+      padding: 0.8rem 0rem 3rem 0.8rem;
+    }
+
+    .dots {
+      padding-bottom: 1.5rem;
+    }
+
+    .firstContent,
+    .secondContent {
+      width: 50%;
+    }
+
+    .para {
+      color: #FFF;
+      width: 80%;
+      font-family: Poppins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    .image1 {
+      position: absolute;
+      top: 6rem;
+      right: 20rem;
+    }
+
+    .image2 {
+      position: absolute;
+      /* right: 13rem; */
+      top: 10rem;
+      right: 12rem;
+    }
+
     .firstLabel {
 
       width: 100%;
@@ -392,36 +425,43 @@ line-height: normal;
       justify-content: center;
       margin-bottom: 2rem;
     }
-.parent{
-  display: flex;
-}
+
+    .parent {
+      display: flex;
+    }
+
     .labelSizeWomen {
       border-radius: 10px;
-border: 1px solid #ABABAB;
+      border: 1px solid #ABABAB;
 
-background: linear-gradient(93deg, #6CB9FF 0.85%, #1563AB 100%);
+      background: linear-gradient(93deg, #6CB9FF 0.85%, #1563AB 100%);
 
 
       /* padding: 0.7rem; */
     }
-.secondContent{
-  display: flex;
-}
-.secondContent img{
-  height: 15rem;
-  width: 15rem;
-}
+
+    .secondContent {
+      display: flex;
+    }
+
+    .secondContent img {
+      height: 15rem;
+      width: 15rem;
+    }
+
     .boxes {
       display: flex;
       justify-content: center;
       flex-wrap: wrap !important;
       gap: 1.5rem;
     }
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     .medium {
       display: flex;
       padding: 10px 30px;
@@ -473,7 +513,7 @@ background: linear-gradient(93deg, #6CB9FF 0.85%, #1563AB 100%);
     .centerContent {
       padding-top: 5rem;
       padding-left: 1rem;
-      padding-right: 6rem;
+      padding-right: 7rem;
     }
 
     .myBtn {
@@ -578,15 +618,29 @@ background: linear-gradient(93deg, #6CB9FF 0.85%, #1563AB 100%);
 
     }
 
+    .setTemplate2 {
+      padding: 10px 22px;
+
+    }
+
+    .setTemplate {
+      padding: 10px 30px;
+
+    }
+
     .setTemplate,
     .setTemplate2 {
       display: inline-flex;
-      padding: 10px 30px;
       justify-content: center;
       align-items: center;
       gap: 10px;
       border-radius: 5px;
       border: none;
+    }
+
+    .createDesign2 {
+      padding: 7px 25px;
+
     }
 
     .createDesign,
@@ -595,7 +649,7 @@ background: linear-gradient(93deg, #6CB9FF 0.85%, #1563AB 100%);
       padding: 10px 30px;
       justify-content: center;
       align-items: center;
-      gap: 10px;
+      /* gap: 10px; */
       border-radius: 5px;
       border: 2px solid #1563AB;
       color: #1563AB;
@@ -644,6 +698,115 @@ background: linear-gradient(93deg, #6CB9FF 0.85%, #1563AB 100%);
       line-height: normal;
     }
 
+    @media screen and (max-width:906px) {
+      .templateLibrary {
+        flex-direction: column;
+      }
+    }
+
+    @media screen and (min-width:800px) and (max-width:1024px) {
+      .image1 {
+        top: 11rem;
+        right: 15rem;
+      }
+
+      .image2 {
+        top: 13rem;
+        right: 7rem;
+      }
+    }
+
+    @media screen and (min-width:600px) and (max-width:800px) {
+      .image1 {
+        top: 11rem;
+        right: 10rem;
+      }
+
+      .image2 {
+        top: 13rem;
+        right: 3rem;
+      }
+    }
+
+    @media screen and (max-width:400px) {
+      .image1 {
+        height: 12rem !important;
+        width: 12rem !important;
+        top: 17rem;
+        right: 1.5rem;
+      }
+
+      .projectBox {
+        padding: 0.4rem 0.4rem
+      }
+
+      .firstContent {
+        padding: 0.8rem 0rem 0rem 0.8rem;
+      }
+
+      .centerContent {
+        padding-right: 0.7rem !important;
+        padding-left: 0.7rem !important;
+      }
+
+      .image2 {
+        height: 12rem !important;
+        width: 12rem !important;
+        top: 20rem;
+        right: -3.6rem;
+      }
+    }
+
+    @media screen and (min-width:400px) and (max-width:600px) {
+      .image1 {
+        height: 13rem !important;
+        width: 13rem !important;
+        top: 15rem;
+        right: 2rem;
+      }
+
+      .firstContent {
+        padding: 0.8rem 0rem 0rem 0.8rem;
+      }
+
+      .centerContent {
+        padding-right: 0.7rem !important;
+        padding-left: 0.7rem !important;
+      }
+
+      .image2 {
+        height: 13rem !important;
+        width: 13rem !important;
+        top: 18rem;
+        right: -3.5rem;
+      }
+    }
+
+    @media screen and (max-width:396px) {
+      .secondTemplate .firstChild {
+        padding: 0.3rem;
+      }
+
+      .templateContent2 {
+        gap: 0.3rem !important;
+      }
+
+
+      .myBox2 {
+        padding: 0.6em !important;
+      }
+    }
+
+    @media screen and (max-width:720px) {
+
+
+      .templateContent2 {
+        padding-left: 0rem;
+        padding-right: 0rem;
+
+      }
+    }
+
     @media screen and (max-width:510px) {
       .categories {
         flex-direction: column;
@@ -677,8 +840,6 @@ background: linear-gradient(93deg, #6CB9FF 0.85%, #1563AB 100%);
       .setTemplate2,
       .createDesign2 {
         margin-top: 0.5rem;
-        width: 12rem;
-        display: block !important;
       }
 
       .svgAndInput2 input {
@@ -732,33 +893,33 @@ display: none !important;
     rel="stylesheet" />
 
   <!-- Icons -->
-  <link rel="stylesheet" href="../../assets/vendor/fonts/fontawesome.css" />
-  <link rel="stylesheet" href="../../assets/vendor/fonts/tabler-icons.css" />
-  <link rel="stylesheet" href="../../assets/vendor/fonts/flag-icons.css" />
+  <link rel="stylesheet" href="./assets/vendor/fonts/fontawesome.css" />
+  <link rel="stylesheet" href="./assets/vendor/fonts/tabler-icons.css" />
+  <link rel="stylesheet" href="./assets/vendor/fonts/flag-icons.css" />
 
   <!-- Core CSS -->
-  <link rel="stylesheet" href="../../assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
-  <!-- <link rel="stylesheet" href="../../assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" /> -->
-  <link rel="stylesheet" href="../../assets/css/demo.css" />
+  <link rel="stylesheet" href="./assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
+  <!-- <link rel="stylesheet" href="./assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" /> -->
+  <link rel="stylesheet" href="./assets/css/demo.css" />
 
   <!-- Vendors CSS -->
-  <link rel="stylesheet" href="../../assets/vendor/libs/node-waves/node-waves.css" />
-  <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-  <link rel="stylesheet" href="../../assets/vendor/libs/typeahead-js/typeahead.css" />
-  <link rel="stylesheet" href="../../assets/vendor/libs/apex-charts/apex-charts.css" />
-  <link rel="stylesheet" href="../../assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
-  <link rel="stylesheet" href="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
-  <link rel="stylesheet" href="../../assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
+  <link rel="stylesheet" href="./assets/vendor/libs/node-waves/node-waves.css" />
+  <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+  <link rel="stylesheet" href="./assets/vendor/libs/typeahead-js/typeahead.css" />
+  <link rel="stylesheet" href="./assets/vendor/libs/apex-charts/apex-charts.css" />
+  <link rel="stylesheet" href="./assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+  <link rel="stylesheet" href="./assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+  <link rel="stylesheet" href="./assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
 
   <!-- Page CSS -->
 
   <!-- Helpers -->
-  <script src="../../assets/vendor/js/helpers.js"></script>
+  <script src="./assets/vendor/js/helpers.js"></script>
   <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
   <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
-  <script src="../../assets/vendor/js/template-customizer.js"></script>
+  <script src="./assets/vendor/js/template-customizer.js"></script>
   <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-  <script src="../../assets/js/config.js"></script>
+  <script src="./assets/js/config.js"></script>
 </head>
 
 <body>
@@ -773,7 +934,7 @@ display: none !important;
         </a>
 
       </div>
-      <img src="/images/Jawaid label logo 1.png" alt="">
+      <img src="./images/Jawaid label logo 1.png" alt="">
 
       <div class="navbar-nav align-items-center">
         <div class="nav-item navbar-search-wrapper mb-0">
@@ -809,22 +970,22 @@ display: none !important;
       <aside style="color: black !important; background-color: white !important;" id="layout-menu"
         class="layout-menu menu-vertical menu bg-menu-theme">
         <!-- <div class="app-brand demo">
-      <a href="index.html" class="app-brand-link">
-      
+    <a href="index.html" class="app-brand-link">
+    
 <img class="nightlifeLogo" src="/assets/img/NIGHTLIFE.png" alt="">            </a>
 
-      <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
-        <i class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"></i>
-        <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
-      </a>
-    </div> -->
+    <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+      <i class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"></i>
+      <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
+    </a>
+  </div> -->
 
         <div class="menu-inner-shadow"></div>
 
         <ul class="menu-inner py-1">
           <!-- Dashboards -->
           <li class="menu-item active">
-            <a href="" class="menu-link">
+            <a href="dashboard.html" class="menu-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 36 36" fill="none">
                 <path d="M6 6H15V18H6V6ZM6 24H15V30H6V24ZM21 18H30V30H21V18ZM21 6H30V12H21V6Z" stroke="#6D6D6D"
                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -846,20 +1007,25 @@ display: none !important;
               <div data-i18n="Project">Project</div>
             </a>
             <ul class="menu-sub">
+
+
+              <!-- Add Zara subheading and items here -->
               <li class="menu-item">
-                <a href="Dj-edit-profile.html" class="menu-link">
-                  <div data-i18n="Create & Edit Profile">Create & Edit Profile</div>
+                <a href="" class="menu-link menu-toggle">
+                  <div data-i18n="Zara">Zara</div>
                 </a>
-              </li>
-              <li class="menu-item">
-                <a href="Dj-upload-media.html" class="menu-link">
-                  <div data-i18n="Upload Media">Upload Media</div>
-                </a>
-              </li>
-              <li class="menu-item">
-                <a href="Dj-gallery.html" class="menu-link">
-                  <div data-i18n="Gallery">Gallery</div>
-                </a>
+                <ul class="menu-sub">
+                  <li class="menu-item ">
+                    <a href="template-library.html" class="menu-link">
+                      <div data-i18n="Template">Template</div>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="" class="menu-link">
+                      <div data-i18n="Labels">Labels</div>
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </li>
@@ -874,32 +1040,32 @@ display: none !important;
             </a>
             <ul class="menu-sub">
               <li class="menu-item">
-                <a href="/create-layout.html" class="menu-link">
+                <a href="" class="menu-link">
                   <div data-i18n="Dj Availability">Dj Availability</div>
                 </a>
               </li>
               <li class="menu-item">
-                <a href="saved-layout.html" class="menu-link">
+                <a href="" class="menu-link">
                   <div data-i18n="Dj Booking list">Dj Booking list</div>
                 </a>
               </li>
               <li class="menu-item">
-                <a href="saved-layout.html" class="menu-link">
+                <a href="" class="menu-link">
                   <div data-i18n="Dj Booking">Dj Booking</div>
                 </a>
               </li>
               <li class="menu-item">
-                <a href="saved-layout.html" class="menu-link">
+                <a href="" class="menu-link">
                   <div data-i18n="Event Pricing">Event Pricing</div>
                 </a>
               </li>
               <li class="menu-item">
-                <a href="saved-layout.html" class="menu-link">
+                <a href="" class="menu-link">
                   <div data-i18n="Song Request">Song Request</div>
                 </a>
               </li>
               <li class="menu-item">
-                <a href="saved-layout.html" class="menu-link">
+                <a href="" class="menu-link">
                   <div data-i18n="Tips Notification">Tips Notification</div>
                 </a>
               </li>
@@ -919,14 +1085,19 @@ display: none !important;
               <div data-i18n="Set Template">Set Template</div>
             </a>
             <ul class="menu-sub">
-              <li class="menu-item">
-                <a href="profile_setting.html" class="menu-link">
-                  <div data-i18n="Profile Rereate">Profile Recreate</div>
+              <li class="menu-item ">
+                <a href="label-size.html" class="menu-link">
+                  <div data-i18n="Label Size">Label Size</div>
                 </a>
               </li>
               <li class="menu-item">
-                <a href="password-change.html" class="menu-link">
-                  <div data-i18n="Payment Setting">Payment Setting</div>
+                <a href="" class="menu-link">
+                  <div data-i18n="Set Label Fields">Set Label Fields</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="create-design-form.html" class="menu-link">
+                  <div data-i18n="Form Fields">Form Fields</div>
                 </a>
               </li>
 
@@ -961,6 +1132,18 @@ display: none !important;
 
 
 
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 36 36" fill="none">
+                <path
+                  d="M28.5 28.5H7.5V7.5H28.5M28.5 4.5H7.5C6.70435 4.5 5.94129 4.81607 5.37868 5.37868C4.81607 5.94129 4.5 6.70435 4.5 7.5V28.5C4.5 29.2956 4.81607 30.0587 5.37868 30.6213C5.94129 31.1839 6.70435 31.5 7.5 31.5H28.5C29.2956 31.5 30.0587 31.1839 30.6213 30.6213C31.1839 30.0587 31.5 29.2956 31.5 28.5V7.5C31.5 6.70435 31.1839 5.94129 30.6213 5.37868C30.0587 4.81607 29.2956 4.5 28.5 4.5ZM24.75 24.375C24.75 22.125 20.25 21 18 21C15.75 21 11.25 22.125 11.25 24.375V25.5H24.75M18 18.375C18.8951 18.375 19.7535 18.0194 20.3865 17.3865C21.0194 16.7535 21.375 15.8951 21.375 15C21.375 14.1049 21.0194 13.2465 20.3865 12.6135C19.7535 11.9806 18.8951 11.625 18 11.625C17.1049 11.625 16.2465 11.9806 15.6135 12.6135C14.9806 13.2465 14.625 14.1049 14.625 15C14.625 15.8951 14.9806 16.7535 15.6135 17.3865C16.2465 18.0194 17.1049 18.375 18 18.375Z"
+                  fill="#6D6D6D" />
+              </svg>
+              <div data-i18n="Logout">Logout</div>
+              <!-- <div class="badge bg-primary rounded-pill ms-auto">3</div> -->
+            </a>
+
+          </li>
 
 
 
@@ -1018,278 +1201,355 @@ display: none !important;
 
           <div class="labelSizeWomen" style="color: rgb(255, 255, 255) !important;">
             <div class="parent">
-            <div class="firstContent"><h2 style="color: rgb(255, 255, 255) !important;">BANNERS</h2>
-          <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-     </div>
-    
-     <div class="secondContent">
-    <img class="image1" src="/images/Label.I15 (1).png" alt="">
-    <img class="image2" src="/images/Label.I15 (1).png" alt="">
-  </div>
- </div>
- 
-  <div class="dots">
-    <div class="1stDot" style="background-color: gray !important;
+              <div class="firstContent">
+                <h2 style="color: rgb(255, 255, 255) !important;">BANNERS</h2>
+                <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua</p>
+              </div>
+
+              <div class="secondContent">
+                <img class="image1" src="./images/Label.I15 (1).png" alt="">
+                <img class="image2" src="./images/Label.I15 (1).png" alt="">
+              </div>
+            </div>
+
+            <div class="dots">
+              <div class="1stDot" style="background-color: gray !important;
 height: 0.5rem !important;
 width: 0.5rem !important;
 border-radius: 50% !important;"></div>
-  <div class="2ndDot" style="background-color: white !important;
+              <div class="2ndDot" style="background-color: white !important;
 height: 0.5rem !important;
 width: 0.5rem !important;
 border-radius: 50% !important;"></div>
-  <div class="3rdDot" style="background-color: white !important;
+              <div class="3rdDot" style="background-color: white !important;
 height: 0.5rem !important;
 width: 0.5rem !important;
 border-radius: 50% !important;">
-</div>
+              </div>
 
-</div>
+            </div>
           </div>
 
 
           <div class="templateLibrary">
             <div class="firstTemplate">
               <div class="firstChild">
-                <div class="inputAndSpan">  <h2 style="display: inline; font-size: 1.5rem; font-weight: bold;">TEMPLATE LIBRARY</h2>
-                <span>View All</span></div>
+                <div class="inputAndSpan">
+                  <h2 style="display: inline; font-size: 1.5rem; font-weight: bold;">TEMPLATE LIBRARY</h2>
+                  <span>View All</span>
+                </div>
                 <div class="templateContent">
                   <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
-                    <path d="M19.0001 34.8334C27.7448 34.8334 34.8334 27.7448 34.8334 19C34.8334 10.2553 27.7448 3.16669 19.0001 3.16669C10.2553 3.16669 3.16675 10.2553 3.16675 19C3.16675 27.7448 10.2553 34.8334 19.0001 34.8334Z" stroke="#ABABAB" stroke-width="3" stroke-linejoin="round"/>
-                    <path d="M21.375 26.125L14.25 19L21.375 11.875" stroke="#ABABAB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <div class="myBox">
-                      <div class="innerBox"></div>
-                      
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
-                      <path d="M18.9999 3.16668C10.2552 3.16668 3.16659 10.2553 3.16659 19C3.16659 27.7448 10.2552 34.8333 18.9999 34.8333C27.7447 34.8333 34.8333 27.7448 34.8333 19C34.8333 10.2553 27.7447 3.16668 18.9999 3.16668Z" stroke="#ABABAB" stroke-width="3" stroke-linejoin="round"/>
-                      <path d="M16.625 11.875L23.75 19L16.625 26.125" stroke="#ABABAB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
+                    <path
+                      d="M19.0001 34.8334C27.7448 34.8334 34.8334 27.7448 34.8334 19C34.8334 10.2553 27.7448 3.16669 19.0001 3.16669C10.2553 3.16669 3.16675 10.2553 3.16675 19C3.16675 27.7448 10.2553 34.8334 19.0001 34.8334Z"
+                      stroke="#ABABAB" stroke-width="3" stroke-linejoin="round" />
+                    <path d="M21.375 26.125L14.25 19L21.375 11.875" stroke="#ABABAB" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <div class="myBox">
+                    <div class="innerBox"></div>
+
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                    <path
+                      d="M18.9999 3.16668C10.2552 3.16668 3.16659 10.2553 3.16659 19C3.16659 27.7448 10.2552 34.8333 18.9999 34.8333C27.7447 34.8333 34.8333 27.7448 34.8333 19C34.8333 10.2553 27.7447 3.16668 18.9999 3.16668Z"
+                      stroke="#ABABAB" stroke-width="3" stroke-linejoin="round" />
+                    <path d="M16.625 11.875L23.75 19L16.625 26.125" stroke="#ABABAB" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
                 </div>
               </div>
 
               <div class="secondChild">
-          <div class="inputAndSpan">  <h2>PROJECTS</h2>
-                <span>View All</span></div>
+                <div class="inputAndSpan">
+                  <h2>PROJECTS</h2>
+                  <span>View All</span>
+                </div>
                 <div class="templateContent" style="gap: 1rem;">
                   <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
-                    <path d="M19.0001 34.8334C27.7448 34.8334 34.8334 27.7448 34.8334 19C34.8334 10.2553 27.7448 3.16669 19.0001 3.16669C10.2553 3.16669 3.16675 10.2553 3.16675 19C3.16675 27.7448 10.2553 34.8334 19.0001 34.8334Z" stroke="#ABABAB" stroke-width="3" stroke-linejoin="round"/>
-                    <path d="M21.375 26.125L14.25 19L21.375 11.875" stroke="#ABABAB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <div class="parentOfProject">
+                    <path
+                      d="M19.0001 34.8334C27.7448 34.8334 34.8334 27.7448 34.8334 19C34.8334 10.2553 27.7448 3.16669 19.0001 3.16669C10.2553 3.16669 3.16675 10.2553 3.16675 19C3.16675 27.7448 10.2553 34.8334 19.0001 34.8334Z"
+                      stroke="#ABABAB" stroke-width="3" stroke-linejoin="round" />
+                    <path d="M21.375 26.125L14.25 19L21.375 11.875" stroke="#ABABAB" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <div class="parentOfProject">
                     <div class="projectBox">
-                        <img src="/images/image 6.png" alt="">
-                      
+                      <img src="./images/image 6.png" alt="">
+
                     </div>
                     <div class="projectBox">
-                        <img src="/images/image 6.png" alt="">
+                      <img src="./images/image 6.png" alt="">
 
-                      
-                    </div></div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
-                      <path d="M18.9999 3.16668C10.2552 3.16668 3.16659 10.2553 3.16659 19C3.16659 27.7448 10.2552 34.8333 18.9999 34.8333C27.7447 34.8333 34.8333 27.7448 34.8333 19C34.8333 10.2553 27.7447 3.16668 18.9999 3.16668Z" stroke="#ABABAB" stroke-width="3" stroke-linejoin="round"/>
-                      <path d="M16.625 11.875L23.75 19L16.625 26.125" stroke="#ABABAB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
+
+                    </div>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                    <path
+                      d="M18.9999 3.16668C10.2552 3.16668 3.16659 10.2553 3.16659 19C3.16659 27.7448 10.2552 34.8333 18.9999 34.8333C27.7447 34.8333 34.8333 27.7448 34.8333 19C34.8333 10.2553 27.7447 3.16668 18.9999 3.16668Z"
+                      stroke="#ABABAB" stroke-width="3" stroke-linejoin="round" />
+                    <path d="M16.625 11.875L23.75 19L16.625 26.125" stroke="#ABABAB" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
                 </div>
               </div>
             </div>
             <div class="secondTemplate">
 
               <div class="firstChild">
-                <div class="inputAndSpan"> <h2 style="display: inline;">Favourites</h2>
-                <span>View All</span></div>
+                <div class="inputAndSpan">
+                  <h2 style="display: inline;">Favourites</h2>
+                  <span>View All</span>
+                </div>
                 <div class="templateContent2" style="display: flex; flex-wrap: wrap;gap:1rem; justify-content: center;">
-                 
-                    <div class="myBox2">
-                      <div class="innerBox2">
-                        <img src="images/image 8.png" alt="">
-                      </div>
-                      
-                    </div>
-                    <div class="myBox2">
-                      <div class="innerBox2">
-                        <img src="images/image 8.png" alt="">
 
-                      </div>
-                      
+                  <div class="myBox2">
+                    <div class="innerBox2">
+                      <img src="images/image 8.png" alt="">
                     </div>
-                    <div class="myBox2">
-                      <div class="innerBox2">
-                        <img src="images/image 8.png" alt="">
 
-                      </div>
-                      
-                    </div>
-                    <div class="myBox2">
-                      <div class="innerBox2">
-                        <img src="images/image 8.png" alt="">
+                  </div>
+                  <div class="myBox2">
+                    <div class="innerBox2">
+                      <img src="images/image 8.png" alt="">
 
-                      </div>
-                      
                     </div>
-                
+
+                  </div>
+                  <div class="myBox2">
+                    <div class="innerBox2">
+                      <img src="images/image 8.png" alt="">
+
+                    </div>
+
+                  </div>
+                  <div class="myBox2">
+                    <div class="innerBox2">
+                      <img src="images/image 8.png" alt="">
+
+                    </div>
+
+                  </div>
+
                 </div>
               </div>
 
             </div>
           </div>
-       <div class="ourClients">
-       
-       <h2 style="color: #6D6D6D;font-family: Poppins;font-size: 32px;font-style: normal;font-weight: 800;line-height: normal;">OUR CLIENTS</h2>
-       <p style="color: var(--On-Secondary-Container30, #434659);
+          <div class="ourClients">
+
+            <h2
+              style="color: #6D6D6D;font-family: Poppins;font-size: 32px;font-style: normal;font-weight: 800;line-height: normal;">
+              OUR CLIENTS</h2>
+            <p style="color: var(--On-Secondary-Container30, #434659);
        font-family: Poppins;
        font-size: 20px;
        font-style: normal;
        font-weight: 400;
        line-height: normal;">Monthly Overview</p>
-       
-        <div class="toggle">
-          <div class="toggle-title  " style="display: flex;align-items: baseline !important; justify-content: space-between;">
-           <div class="headingAndPic" style="display: flex; align-items: baseline;">
-            <div class="image" >
-              <img src="/images/Nike-Logo-PNG11 (1).png" alt="">
-            </div>
-            <h3>
-            <span class="title-name" style="color: black;">NIKE</span>
-            </h3></div>
-           <div class="pieces"><h3>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
-              <path d="M1 1L8 8L15 1" stroke="#6D6D6D" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              <span class="title-name" style="color: black;">1500</span>
-              <span class="title-name" style="color: black; font-size: 14px;">Pcs</span>
-              </h3></div> 
-          </div>
-          
-          <div class="toggle-inner">
-            <p>Perhaps not. Astronomers have been scouring the universe for places where water worlds might have given rise to life, from Europa and Mars in our solar system to planets many light years away. Radio telescopes have been eavesdropping on the heavens and in 1977 a signal bearing the potential hallmarks of an alien message was heard. Astronomers are now able to scan the atmospheres of alien worlds for oxygen and water. The next few decades will be an exciting time to be an alien hunter with up to 60bn potentially habitable planets in our Milky Way alone.</p>
-          </div>
-          
-          </div><!-- END OF TOGGLE -->
+
+            <div class="toggle">
+              <div class="toggle-title  "
+                style="display: flex;align-items: baseline !important; justify-content: space-between;">
+                <div class="headingAndPic" style="display: flex; align-items: baseline;">
+                  <div class="image">
+                    <img src="./images/Nike-Logo-PNG11 (1).png" alt="">
+                  </div>
+                  <h3>
+                    <span class="title-name" style="color: black;">NIKE</span>
+                  </h3>
+                </div>
+                <div class="pieces">
+                  <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
+                      <path d="M1 1L8 8L15 1" stroke="#6D6D6D" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    <span class="title-name" style="color: black;">1500</span>
+                    <span class="title-name" style="color: black; font-size: 14px;">Pcs</span>
+                  </h3>
+                </div>
+              </div>
+
+              <div class="toggle-inner">
+                <p>Perhaps not. Astronomers have been scouring the universe for places where water worlds might have
+                  given rise to life, from Europa and Mars in our solar system to planets many light years away. Radio
+                  telescopes have been eavesdropping on the heavens and in 1977 a signal bearing the potential hallmarks
+                  of an alien message was heard. Astronomers are now able to scan the atmospheres of alien worlds for
+                  oxygen and water. The next few decades will be an exciting time to be an alien hunter with up to 60bn
+                  potentially habitable planets in our Milky Way alone.</p>
+              </div>
+
+            </div><!-- END OF TOGGLE -->
 
 
-          
-        <div class="toggle">
-          <div class="toggle-title  " style="display: flex;align-items: baseline !important; justify-content: space-between;">
-           <div class="headingAndPic" style="display: flex; align-items: baseline;">
-            <div class="image" >
-              <img src="/images/Zara-Logo-PNG5.png" alt="">
-            </div>
-            <h3>
-            <span class="title-name" style="color: black;">ZARA</span>
-            </h3></div>
-           <div class="pieces"><h3>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
-              <path d="M1 1L8 8L15 1" stroke="#6D6D6D" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              <span class="title-name" style="color: black;">1500</span>
-              <span class="title-name" style="color: black; font-size: 14px;">Pcs</span>
-              </h3></div> 
-          </div>
-          
-          <div class="toggle-inner">
-            <p>Perhaps not. Astronomers have been scouring the universe for places where water worlds might have given rise to life, from Europa and Mars in our solar system to planets many light years away. Radio telescopes have been eavesdropping on the heavens and in 1977 a signal bearing the potential hallmarks of an alien message was heard. Astronomers are now able to scan the atmospheres of alien worlds for oxygen and water. The next few decades will be an exciting time to be an alien hunter with up to 60bn potentially habitable planets in our Milky Way alone.</p>
-          </div>
-          
-          </div><!-- END OF TOGGLE -->
 
-        <div class="toggle">
-          <div class="toggle-title  " style="display: flex;align-items: baseline !important; justify-content: space-between;">
-           <div class="headingAndPic" style="display: flex; align-items: baseline;">
-            <div class="image" >
-              <img src="/images/Louis_Vuitton-Logo-PNG8.png" alt="">
-            </div>
-            <h3>
-            <span class="title-name" style="color: black;">LOUIS VUITION</span>
-            </h3></div>
-           <div class="pieces"><h3>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
-              <path d="M1 1L8 8L15 1" stroke="#6D6D6D" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              <span class="title-name" style="color: black;">1500</span>
-              <span class="title-name" style="color: black; font-size: 14px;">Pcs</span>
-              </h3></div> 
-          </div>
-          
-          <div class="toggle-inner">
-            <p>Perhaps not. Astronomers have been scouring the universe for places where water worlds might have given rise to life, from Europa and Mars in our solar system to planets many light years away. Radio telescopes have been eavesdropping on the heavens and in 1977 a signal bearing the potential hallmarks of an alien message was heard. Astronomers are now able to scan the atmospheres of alien worlds for oxygen and water. The next few decades will be an exciting time to be an alien hunter with up to 60bn potentially habitable planets in our Milky Way alone.</p>
-          </div>
-          
-          </div><!-- END OF TOGGLE -->
+            <div class="toggle">
+              <div class="toggle-title  "
+                style="display: flex;align-items: baseline !important; justify-content: space-between;">
+                <div class="headingAndPic" style="display: flex; align-items: baseline;">
+                  <div class="image">
+                    <img src="./images/Zara-Logo-PNG5.png" alt="">
+                  </div>
+                  <h3>
+                    <span class="title-name" style="color: black;">ZARA</span>
+                  </h3>
+                </div>
+                <div class="pieces">
+                  <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
+                      <path d="M1 1L8 8L15 1" stroke="#6D6D6D" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    <span class="title-name" style="color: black;">1500</span>
+                    <span class="title-name" style="color: black; font-size: 14px;">Pcs</span>
+                  </h3>
+                </div>
+              </div>
 
-        <div class="toggle">
-          <div class="toggle-title  " style="display: flex;align-items: baseline !important; justify-content: space-between;">
-           <div class="headingAndPic" style="display: flex; align-items: baseline;">
-            <div class="image" >
-              <img src="/images/Puma-Logo-PNG4.png" alt="">
-            </div>
-            <h3>
-            <span class="title-name" style="color: black;">PUMA</span>
-            </h3></div>
-           <div class="pieces"><h3>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
-              <path d="M1 1L8 8L15 1" stroke="#6D6D6D" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              <span class="title-name" style="color: black;">1500</span>
-              <span class="title-name" style="color: black; font-size: 14px;">Pcs</span>
-              </h3></div> 
-          </div>
-          
-          <div class="toggle-inner">
-            <p>Perhaps not. Astronomers have been scouring the universe for places where water worlds might have given rise to life, from Europa and Mars in our solar system to planets many light years away. Radio telescopes have been eavesdropping on the heavens and in 1977 a signal bearing the potential hallmarks of an alien message was heard. Astronomers are now able to scan the atmospheres of alien worlds for oxygen and water. The next few decades will be an exciting time to be an alien hunter with up to 60bn potentially habitable planets in our Milky Way alone.</p>
-          </div>
-          
-          </div><!-- END OF TOGGLE -->
+              <div class="toggle-inner">
+                <p>Perhaps not. Astronomers have been scouring the universe for places where water worlds might have
+                  given rise to life, from Europa and Mars in our solar system to planets many light years away. Radio
+                  telescopes have been eavesdropping on the heavens and in 1977 a signal bearing the potential hallmarks
+                  of an alien message was heard. Astronomers are now able to scan the atmospheres of alien worlds for
+                  oxygen and water. The next few decades will be an exciting time to be an alien hunter with up to 60bn
+                  potentially habitable planets in our Milky Way alone.</p>
+              </div>
 
-        <div class="toggle">
-          <div class="toggle-title  " style="display: flex;align-items: baseline !important; justify-content: space-between;">
-           <div class="headingAndPic" style="display: flex; align-items: baseline;">
-            <div class="image" >
-              <img src="/images/Adidas_Logo_PNG_(13).png" alt="">
-            </div>
-            <h3>
-            <span class="title-name" style="color: black;">ADIDAS</span>
-            </h3></div>
-           <div class="pieces"><h3>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
-              <path d="M1 1L8 8L15 1" stroke="#6D6D6D" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              <span class="title-name" style="color: black;">1500</span>
-              <span class="title-name" style="color: black; font-size: 14px;">Pcs</span>
-              </h3></div> 
-          </div>
-          
-          <div class="toggle-inner">
-            <p>Perhaps not. Astronomers have been scouring the universe for places where water worlds might have given rise to life, from Europa and Mars in our solar system to planets many light years away. Radio telescopes have been eavesdropping on the heavens and in 1977 a signal bearing the potential hallmarks of an alien message was heard. Astronomers are now able to scan the atmospheres of alien worlds for oxygen and water. The next few decades will be an exciting time to be an alien hunter with up to 60bn potentially habitable planets in our Milky Way alone.</p>
-          </div>
-          
-          </div><!-- END OF TOGGLE -->
+            </div><!-- END OF TOGGLE -->
 
-        <div class="toggle">
-          <div class="toggle-title  " style="display: flex;align-items: baseline !important; justify-content: space-between;">
-           <div class="headingAndPic" style="display: flex; align-items: baseline;">
-            <div class="image" >
-              <img src="/images/Nike-Logo-PNG11 (1).png" alt="">
-            </div>
-            <h3>
-            <span class="title-name" style="color: black;">NIKE</span>
-            </h3></div>
-           <div class="pieces"><h3>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
-              <path d="M1 1L8 8L15 1" stroke="#6D6D6D" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              <span class="title-name" style="color: black;">1500</span>
-              <span class="title-name" style="color: black; font-size: 14px;">Pcs</span>
-              </h3></div> 
+            <div class="toggle">
+              <div class="toggle-title  "
+                style="display: flex;align-items: baseline !important; justify-content: space-between;">
+                <div class="headingAndPic" style="display: flex; align-items: baseline;">
+                  <div class="image">
+                    <img src="./images/Louis_Vuitton-Logo-PNG8.png" alt="">
+                  </div>
+                  <h3>
+                    <span class="title-name" style="color: black;">LOUIS VUITION</span>
+                  </h3>
+                </div>
+                <div class="pieces">
+                  <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
+                      <path d="M1 1L8 8L15 1" stroke="#6D6D6D" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    <span class="title-name" style="color: black;">1500</span>
+                    <span class="title-name" style="color: black; font-size: 14px;">Pcs</span>
+                  </h3>
+                </div>
+              </div>
+
+              <div class="toggle-inner">
+                <p>Perhaps not. Astronomers have been scouring the universe for places where water worlds might have
+                  given rise to life, from Europa and Mars in our solar system to planets many light years away. Radio
+                  telescopes have been eavesdropping on the heavens and in 1977 a signal bearing the potential hallmarks
+                  of an alien message was heard. Astronomers are now able to scan the atmospheres of alien worlds for
+                  oxygen and water. The next few decades will be an exciting time to be an alien hunter with up to 60bn
+                  potentially habitable planets in our Milky Way alone.</p>
+              </div>
+
+            </div><!-- END OF TOGGLE -->
+
+            <div class="toggle">
+              <div class="toggle-title  "
+                style="display: flex;align-items: baseline !important; justify-content: space-between;">
+                <div class="headingAndPic" style="display: flex; align-items: baseline;">
+                  <div class="image">
+                    <img src="./images/Puma-Logo-PNG4.png" alt="">
+                  </div>
+                  <h3>
+                    <span class="title-name" style="color: black;">PUMA</span>
+                  </h3>
+                </div>
+                <div class="pieces">
+                  <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
+                      <path d="M1 1L8 8L15 1" stroke="#6D6D6D" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    <span class="title-name" style="color: black;">1500</span>
+                    <span class="title-name" style="color: black; font-size: 14px;">Pcs</span>
+                  </h3>
+                </div>
+              </div>
+
+              <div class="toggle-inner">
+                <p>Perhaps not. Astronomers have been scouring the universe for places where water worlds might have
+                  given rise to life, from Europa and Mars in our solar system to planets many light years away. Radio
+                  telescopes have been eavesdropping on the heavens and in 1977 a signal bearing the potential hallmarks
+                  of an alien message was heard. Astronomers are now able to scan the atmospheres of alien worlds for
+                  oxygen and water. The next few decades will be an exciting time to be an alien hunter with up to 60bn
+                  potentially habitable planets in our Milky Way alone.</p>
+              </div>
+
+            </div><!-- END OF TOGGLE -->
+
+            <div class="toggle">
+              <div class="toggle-title  "
+                style="display: flex;align-items: baseline !important; justify-content: space-between;">
+                <div class="headingAndPic" style="display: flex; align-items: baseline;">
+                  <div class="image">
+                    <img src="./images/Adidas_Logo_PNG_(13).png" alt="">
+                  </div>
+                  <h3>
+                    <span class="title-name" style="color: black;">ADIDAS</span>
+                  </h3>
+                </div>
+                <div class="pieces">
+                  <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
+                      <path d="M1 1L8 8L15 1" stroke="#6D6D6D" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    <span class="title-name" style="color: black;">1500</span>
+                    <span class="title-name" style="color: black; font-size: 14px;">Pcs</span>
+                  </h3>
+                </div>
+              </div>
+
+              <div class="toggle-inner">
+                <p>Perhaps not. Astronomers have been scouring the universe for places where water worlds might have
+                  given rise to life, from Europa and Mars in our solar system to planets many light years away. Radio
+                  telescopes have been eavesdropping on the heavens and in 1977 a signal bearing the potential hallmarks
+                  of an alien message was heard. Astronomers are now able to scan the atmospheres of alien worlds for
+                  oxygen and water. The next few decades will be an exciting time to be an alien hunter with up to 60bn
+                  potentially habitable planets in our Milky Way alone.</p>
+              </div>
+
+            </div><!-- END OF TOGGLE -->
+
+            <div class="toggle">
+              <div class="toggle-title  "
+                style="display: flex;align-items: baseline !important; justify-content: space-between;">
+                <div class="headingAndPic" style="display: flex; align-items: baseline;">
+                  <div class="image">
+                    <img src="./images/Nike-Logo-PNG11 (1).png" alt="">
+                  </div>
+                  <h3>
+                    <span class="title-name" style="color: black;">NIKE</span>
+                  </h3>
+                </div>
+                <div class="pieces">
+                  <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
+                      <path d="M1 1L8 8L15 1" stroke="#6D6D6D" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    <span class="title-name" style="color: black;">1500</span>
+                    <span class="title-name" style="color: black; font-size: 14px;">Pcs</span>
+                  </h3>
+                </div>
+              </div>
+
+              <div class="toggle-inner">
+                <p>Perhaps not. Astronomers have been scouring the universe for places where water worlds might have
+                  given rise to life, from Europa and Mars in our solar system to planets many light years away. Radio
+                  telescopes have been eavesdropping on the heavens and in 1977 a signal bearing the potential hallmarks
+                  of an alien message was heard. Astronomers are now able to scan the atmospheres of alien worlds for
+                  oxygen and water. The next few decades will be an exciting time to be an alien hunter with up to 60bn
+                  potentially habitable planets in our Milky Way alone.</p>
+              </div>
+
+            </div><!-- END OF TOGGLE -->
+
           </div>
-          
-          <div class="toggle-inner">
-            <p>Perhaps not. Astronomers have been scouring the universe for places where water worlds might have given rise to life, from Europa and Mars in our solar system to planets many light years away. Radio telescopes have been eavesdropping on the heavens and in 1977 a signal bearing the potential hallmarks of an alien message was heard. Astronomers are now able to scan the atmospheres of alien worlds for oxygen and water. The next few decades will be an exciting time to be an alien hunter with up to 60bn potentially habitable planets in our Milky Way alone.</p>
-          </div>
-          
-          </div><!-- END OF TOGGLE -->
-          
-       </div>
           <div class="createDiv"> <button class="create">Create</button></div>
         </div>
         <!-- <div class="addProject" id="addProject" style="display: none;">
@@ -1311,38 +1571,39 @@ border-radius: 50% !important;">
   <!-- Core JS -->
   <!-- build:js assets/vendor/js/core.js -->
 
-  <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
-  <script src="../../assets/vendor/libs/popper/popper.js"></script>
-  <script src="../../assets/vendor/js/bootstrap.js"></script>
-  <script src="../../assets/vendor/libs/node-waves/node-waves.js"></script>
-  <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-  <script src="../../assets/vendor/libs/hammer/hammer.js"></script>
-  <script src="../../assets/vendor/libs/i18n/i18n.js"></script>
-  <script src="../../assets/vendor/libs/typeahead-js/typeahead.js"></script>
-  <script src="../../assets/vendor/js/menu.js"></script>
+  <script src="./assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="./assets/vendor/libs/popper/popper.js"></script>
+  <script src="./assets/vendor/js/bootstrap.js"></script>
+  <script src="./assets/vendor/libs/node-waves/node-waves.js"></script>
+  <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="./assets/vendor/libs/hammer/hammer.js"></script>
+  <script src="./assets/vendor/libs/i18n/i18n.js"></script>
+  <script src="./assets/vendor/libs/typeahead-js/typeahead.js"></script>
+  <script src="./assets/vendor/js/menu.js"></script>
 
   <!-- endbuild -->
 
   <!-- Vendors JS -->
-  <script src="../../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+  <script src="./assets/vendor/libs/apex-charts/apexcharts.js"></script>
 
   <!-- Main JS -->
-  <script src="../../assets/js/main.js"></script>
+  <script src="./assets/js/main.js"></script>
 
   <!-- Page JS -->
-  <script src="../../assets/js/dashboards-crm.js"></script>
-  <script src="../../assets/js/product.js"></script>
+  <script src="./assets/js/dashboards-crm.js"></script>
+  <script src="./assets/js/product.js"></script>
   <script>
-    if( jQuery(".toggle .toggle-title").hasClass('active') ){
-		jQuery(".toggle .toggle-title.active").closest('.toggle').find('.toggle-inner').show();
-	}
-	jQuery(".toggle .toggle-title").click(function(){
-		if( jQuery(this).hasClass('active') ){
-			jQuery(this).removeClass("active").closest('.toggle').find('.toggle-inner').slideUp(200);
-		}
-		else{	jQuery(this).addClass("active").closest('.toggle').find('.toggle-inner').slideDown(200);
-		}
-	});
+    if (jQuery(".toggle .toggle-title").hasClass('active')) {
+      jQuery(".toggle .toggle-title.active").closest('.toggle').find('.toggle-inner').show();
+    }
+    jQuery(".toggle .toggle-title").click(function () {
+      if (jQuery(this).hasClass('active')) {
+        jQuery(this).removeClass("active").closest('.toggle').find('.toggle-inner').slideUp(200);
+      }
+      else {
+        jQuery(this).addClass("active").closest('.toggle').find('.toggle-inner').slideDown(200);
+      }
+    });
   </script>
 </body>
 

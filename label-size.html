@@ -15,433 +15,9 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.png" />
   <style>
-    /* Styles for page */
-    .myCard {
-      padding: 1rem 1.2rem;
-      border-radius: 10px;
-      background-color: #FFF;
-      width: 100%;
-      box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.25);
-
-    }
-
-    .myCard h2 {
-      color: #6D6D6D;
-
-      font-family: Poppins;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-    }
-
-    .myCard p {
-      color: #6D6D6D;
-
-      font-family: Open Sans;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-
-    }
-
-    .smallBox1 {
-      display: flex;
-      justify-content: center;
-      background-color: white;
-      margin-top: 1.5rem;
-      width: 151px;
-      height: 151px;
-    }
-
-    .smallBox2 {
-      display: flex;
-      justify-content: center;
-      background-color: white;
-      margin-top: 2.8rem;
-      width: 160px;
-      height: 111px;
-    }
-
-    .smallBox3 {
-      display: flex;
-      justify-content: center;
-      background-color: white;
-      margin-top: 1.5rem;
-      width: 131px;
-      height: 171px;
-    }
-
-    .firstLibrary,
-    .secondLibrary,
-    .thirdLibrary {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      border-radius: 10px;
-      background: #84BFE1;
-      width: 336px;
-      height: 342px;
-      box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.25);
-    }
-
-    .useTemplateBtn {
-      display: flex;
-      width: 214px;
-      height: 36px;
-      padding: 10px 30px;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      color: white;
-      border: none;
-      flex-shrink: 0;
-      border-radius: 5px;
-      background: #1563AB;
-
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    }
-
-    .deleteBtn {
-      display: flex;
-      width: 80px;
-      height: 36px;
-      padding: 10px 30px;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      flex-shrink: 0;
-      color: #1563AB;
-      border-radius: 5px;
-      border: 2px solid #1563AB;
-
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
-    }
-
-    .image {
-      margin-top: 1rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 3.5rem;
-      width: 3.5rem;
-      border-radius: 50%;
-      border: 1px solid gray;
-      /* padding: 1rem; */
-    }
-
     .nightlifeLogo {
       height: 9rem;
       width: 11rem;
-    }
-
-    .inputAndSpan {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .templateLibrary {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .secondTemplate .firstChild {
-      height: 100%;
-    }
-
-    .firstChild,
-    .secondChild {
-      border-radius: 10px;
-      border: 1px solid #ABABAB;
-    }
-
-    .templateLibrary h2 {
-      color: #6D6D6D !important;
-
-      font-family: Poppins;
-      /* font-size: 24px; */
-      font-style: normal;
-      font-weight: 800;
-      line-height: normal;
-      text-transform: uppercase;
-      /* color: black !important; */
-    }
-
-    .templateContent {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 1rem !important;
-
-    }
-
-    .secondTemplate .firstChild {
-      padding: 0.5rem 1.5rem 0.5rem 1.5rem;
-    }
-
-    .templateContent2 {
-      display: flex;
-      align-items: center;
-      margin-top: 1rem !important;
-      padding-left: 2rem;
-      padding-right: 2rem;
-
-    }
-
-    .firstTemplate .firstChild,
-    .secondChild {
-      padding: 1.3rem 1.3rem 1.3rem 1.3rem;
-
-    }
-
-    .firstTemplate {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      border-radius: 10px;
-    }
-
-    .secondTemplate span {
-      color: #1563AB;
-      margin-bottom: 0.5rem;
-
-    }
-
-    .firstTemplate span {
-      color: #1563AB;
-      margin-bottom: 0.3rem;
-
-      font-family: Poppins;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-    }
-
-    .firstChild,
-    .secondChild {
-      border: 1px solid #ABABAB;
-
-    }
-
-    .myBox {
-      display: flex;
-      justify-content: center;
-      /* align-items: center; */
-      border-radius: 10px;
-      background: #84BFE1;
-      height: 8rem;
-      padding-right: 3rem;
-      padding-left: 3rem;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.25);
-
-    }
-
-    .parentOfProject {
-      display: flex;
-      gap: 1rem;
-    }
-
-    /* .projectBox img{
-    width: 1rem;
-  } */
-    .projectBox {
-      display: flex;
-      justify-content: center;
-      padding: 0.5rem 1.4rem;
-      /* align-items: center; */
-      border-radius: 10px;
-      background: #84BFE1;
-      /* height: 8rem; */
-      /* padding-right: 3rem;
-padding-left: 3rem;
-padding-top: 1rem;
-padding-bottom: 1rem; */
-      box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.25);
-
-    }
-
-    .secondTemplate .myBox2 {
-      display: flex;
-      justify-content: center;
-      /* align-items: center; */
-      border-radius: 10px;
-      background: #84BFE1;
-      /* height: 8rem; */
-      padding: 1rem;
-      /* padding-right: 3rem; */
-      /* padding-left: 3rem; */
-      /* padding-top: 1rem; */
-      /* padding-bottom: 1rem; */
-      box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.25);
-
-    }
-
-    .cardButtons {
-      margin-top: 1rem;
-      display: flex;
-      gap: 1rem;
-    }
-
-    .innerBox {
-      padding: 0.7rem 3rem 0.7rem 3rem;
-      background-color: white;
-    }
-
-    .dots {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-    }
-
-    .firstContent {
-      padding: 0.8rem 0rem 3rem 0.8rem;
-    }
-
-    .firstContent p {
-      color: #FFF;
-      position: relative;
-      top: 0.5rem;
-      font-family: Poppins;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-    }
-
-    .dots {
-      padding-bottom: 1.5rem;
-    }
-
-    .secondContent {
-      /* box-shadow: #060606; */
-
-      /* filter: blur(13.5px); */
-      position: relative;
-      bottom: 3rem;
-      /* right: -8rem; */
-      /* left: 0; */
-      /* top: 9rem; */
-      display: flex;
-      /* gap: 1rem; */
-    }
-
-    .firstContent h2 {
-      color: #FFF;
-
-      font-family: Poppins;
-      font-size: 32px;
-      font-style: normal;
-      font-weight: bold;
-      line-height: normal;
-    }
-
-
-
-    .shape1 {
-      /* height: 4rem;
-  width: 8rem; */
-      position: absolute;
-      width: 12rem;
-      height: 7.5rem;
-
-    }
-
-    .shape2 {
-      position: absolute;
-      right: -1rem;
-      width: 7rem;
-      height: 12.4rem;
-      /* height: 8rem;
-  width: 4rem; */
-
-
-    }
-
-    .singleBox {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .shape3 {
-      position: absolute;
-      left: 6.8rem;
-      top: 8.4rem;
-      width: 5.2rem;
-      height: 4rem;
-      /* height: 2.5rem;
-  width: 2.5rem; */
-      /* display: none; */
-
-    }
-
-    .shape4 {
-      position: absolute;
-      /* display: none; */
-      bottom: -10px;
-      top: 8.3rem;
-      width: 6rem;
-      height: 9.7rem;
-      box-shadow: 27px 27px 27px;
-    }
-
-    .shape5 {
-      position: absolute;
-      box-shadow: 27px 27px 27px;
-      width: 13.3rem;
-      height: 5rem;
-      bottom: -7.5rem;
-      left: 6.8rem;
-
-    }
-
-
-    .shape1,
-    .shape2,
-    .shape3,
-    .shape4,
-    .shape5 {
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) !important;
-
-      border-radius: 5px;
-      background-color: white;
-    }
-
-    .firstContent {
-      width: 50%;
-    }
-
-    .secondContent {
-
-      max-width: 300px;
-      width: 100%;
-    }
-
-    .para {
-      color: #FFF;
-      width: 80%;
-      font-family: Poppins;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-    }
-
-    .image1 {
-      position: absolute;
-      top: 6rem;
-    }
-
-    .image2 {
-      position: absolute;
-      right: 13rem;
-      top: 10rem;
     }
 
     .firstLabel {
@@ -514,35 +90,17 @@ padding-bottom: 1rem; */
       margin-bottom: 2rem;
     }
 
-    .parent {
-      display: flex;
-      justify-content: space-around;
-    }
-
-
     .labelSizeWomen {
       border-radius: 10px;
       border: 1px solid #ABABAB;
-      min-height: 17rem;
-      background: linear-gradient(93deg, #6CB9FF 0.85%, #1563AB 100%);
-      /* display: flex; */
-      /* justify-content: space-between; */
-
-      /* padding: 0.7rem; */
+      padding: 0.7rem;
     }
-
 
     .boxes {
       display: flex;
       justify-content: center;
       flex-wrap: wrap !important;
       gap: 1.5rem;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
     }
 
     .medium {
@@ -594,9 +152,9 @@ padding-bottom: 1rem; */
     }
 
     .centerContent {
-      padding-top: 5rem;
+      padding-top: 2rem;
       padding-left: 1rem;
-      padding-right: 6rem;
+      padding-right: 5rem;
     }
 
     .myBtn {
@@ -932,15 +490,15 @@ display: none !important;
       <aside style="color: black !important; background-color: white !important;" id="layout-menu"
         class="layout-menu menu-vertical menu bg-menu-theme">
         <!-- <div class="app-brand demo">
-      <a href="index.html" class="app-brand-link">
-      
+    <a href="index.html" class="app-brand-link">
+    
 <img class="nightlifeLogo" src="/assets/img/NIGHTLIFE.png" alt="">            </a>
 
-      <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
-        <i class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"></i>
-        <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
-      </a>
-    </div> -->
+    <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+      <i class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"></i>
+      <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
+    </a>
+  </div> -->
 
         <div class="menu-inner-shadow"></div>
 
@@ -959,7 +517,7 @@ display: none !important;
           </li>
 
 
-          <li class="menu-item active open">
+          <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 36 36" fill="none">
                 <path
@@ -972,18 +530,18 @@ display: none !important;
 
 
               <!-- Add Zara subheading and items here -->
-              <li class="menu-item active open">
+              <li class="menu-item ">
                 <a href="" class="menu-link menu-toggle">
                   <div data-i18n="Zara">Zara</div>
                 </a>
                 <ul class="menu-sub">
-                  <li class="menu-item active">
-                    <a href="" class="menu-link">
+                  <li class="menu-item ">
+                    <a href="template-library.html" class="menu-link">
                       <div data-i18n="Template">Template</div>
                     </a>
                   </li>
                   <li class="menu-item">
-                    <a href="saved-template.html" class="menu-link">
+                    <a href="" class="menu-link">
                       <div data-i18n="Labels">Labels</div>
                     </a>
                   </li>
@@ -1038,7 +596,7 @@ display: none !important;
 
 
 
-          <li class="menu-item">
+          <li class="menu-item active open">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 36 36" fill="none">
                 <path d="M17.4 6H6V19.2H17.4V6ZM30 24H6V29.4H30V24ZM30 6H22.2V10.8H30V6ZM30 14.4H22.2V19.2H30V14.4Z"
@@ -1047,8 +605,8 @@ display: none !important;
               <div data-i18n="Set Template">Set Template</div>
             </a>
             <ul class="menu-sub">
-              <li class="menu-item">
-                <a href="label-size.html" class="menu-link">
+              <li class="menu-item active">
+                <a href="" class="menu-link">
                   <div data-i18n="Label Size">Label Size</div>
                 </a>
               </li>
@@ -1159,64 +717,43 @@ display: none !important;
         <!-- <div class="cidrcle" style="height: 2rem; display: inline-flex; width: 2rem; border-radius: 50%; background-color: #1563AB;;"></div>
           </div> -->
         <div class="centerContent">
-          <!-- <div class="myBtn"> <button class="customizeBtn">Customize</button></div> -->
+          <div class="myBtn"> <button class="customizeBtn">Customize</button></div>
 
-          <div class="labelSizeWomen" style="color: rgb(255, 255, 255) !important;">
-            <div class="parent">
-              <div class="firstContent">
-                <h2 style="color: rgb(255, 255, 255) !important;">BANNERS</h2>
-                <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua</p>
-              </div>
-
-              <div class="secondContent">
-                <!-- <img class="image1" src="./images/Label.I15 (1).png" alt="">
-    <img class="image2" src="./images/Label.I15 (1).png" alt=""> -->
-                <div class="allShapes">
-                  <div class="shape1"></div>
-                  <div class="shape2"></div>
-                  <div class="shape3"></div>
-                  <div class="shape4"></div>
-                  <div class="shape5"></div>
-                </div>
-              </div>
+          <div class="labelSizeWomen" style="color: black !important;">
+            <h2 style="color: black !important;">Label Sizes For Women</h2>
+            <div class="boxes">
+              <div class="box1 box">Size USA</div>
+              <div class="box2 box">Size MEX</div>
+              <div class="box3 box">Size UK</div>
+              <div class="box4 box">Size BR</div>
+              <div class="box4 box">Size IT</div>
             </div>
-
+            <h4 style="color: black !important; font-size: 20px !important; margin-top: 2.5rem; margin-bottom: 2rem;">
+              Size USA</h4>
+            <div class="buttons" style="display: flex; gap: 1.5rem;"> <button class="small">Small</button>
+              <button class="medium">Medium</button>
+              <button class="large">Large</button>
+            </div>
           </div>
+          <div class="labelSizeKids">
+            <h2 style="color: black !important;">Label Sizes For Kids</h2>
 
-          <h2>TEMPLATE LIBRARY</h2>
-          <div class="templateLibrary">
-            <div class="firstLibrary">
-              <div class="smallBox1"></div>
-              <div class="myCard">
-                <h2>Women Label Size</h2>
-                <p>Lorem ipsum dolor sit amet,</p>
-                <div class="cardButtons">
-                  <button class="useTemplateBtn">Use this template</button>
-                  <button class="deleteBtn">Delete</button>
-                </div>
+            <div class="categories">
+              <div class="firstLabel"><label style="  color: #6D6D6D !important;">Size in cm</label><br>
+                <select name="" id="">
+                  <option value="">116cm</option>
+                  <option value="">126cm</option>
+                  <option value="">156cm</option>
+                  <option value="">106cm</option>
+                </select>
               </div>
-            </div>
-            <div class="secondLibrary">
-              <div class="smallBox2"></div>
-              <div class="myCard">
-                <h2>Women Label Size</h2>
-                <p>Lorem ipsum dolor sit amet,</p>
-                <div class="cardButtons">
-                  <button class="useTemplateBtn">Use this template</button>
-                  <button class="deleteBtn">Delete</button>
-                </div>
-              </div>
-            </div>
-            <div class="thirdLibrary">
-              <div class="smallBox3"></div>
-              <div class="myCard">
-                <h2>Women Label Size</h2>
-                <p>Lorem ipsum dolor sit amet,</p>
-                <div class="cardButtons">
-                  <button class="useTemplateBtn">Use this template</button>
-                  <button class="deleteBtn">Delete</button>
-                </div>
+              <div class="secondLabel"><label style="color: #6D6D6D !important;">Years/Months</label><br>
+                <select name="" id="">
+                  <option value="">6 Years</option>
+                  <option value="">7 Years</option>
+                  <option value="">13 Years</option>
+                  <option value="">5 Years</option>
+                </select>
               </div>
             </div>
           </div>
@@ -1262,19 +799,6 @@ display: none !important;
   <!-- Page JS -->
   <script src="./assets/js/dashboards-crm.js"></script>
   <script src="./assets/js/product.js"></script>
-  <script>
-    if (jQuery(".toggle .toggle-title").hasClass('active')) {
-      jQuery(".toggle .toggle-title.active").closest('.toggle').find('.toggle-inner').show();
-    }
-    jQuery(".toggle .toggle-title").click(function () {
-      if (jQuery(this).hasClass('active')) {
-        jQuery(this).removeClass("active").closest('.toggle').find('.toggle-inner').slideUp(200);
-      }
-      else {
-        jQuery(this).addClass("active").closest('.toggle').find('.toggle-inner').slideDown(200);
-      }
-    });
-  </script>
 </body>
 
 </html>
